@@ -321,8 +321,9 @@ export async function handleCheckout(
     .trim()
     .toLowerCase();
 
-  // Honeypot: real visitors never see or fill this field.
-  if (String(body?.company ?? "") !== "") {
+  // Honeypot: real visitors never see or fill this field. It is deliberately
+  // not called "company", "website" or anything else a browser would autofill.
+  if (String(body?.hp ?? "") !== "") {
     return fail(400, "invalid", "Something went wrong. Please try again.");
   }
   if (fullName.length < 2 || fullName.length > 80) {

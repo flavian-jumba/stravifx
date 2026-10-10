@@ -53,7 +53,7 @@ export function WaitlistForm({
         body: JSON.stringify({
           fullName: form.get("fullName"),
           email: form.get("email"),
-          company: form.get("company"),
+          hp: form.get("hp"),
         }),
       });
       const result = (await response.json().catch(() => null)) as {
@@ -111,15 +111,21 @@ export function WaitlistForm({
         />
       </label>
 
-      {/* Honeypot: hidden from people, tempting to bots */}
+      {/* Honeypot: hidden from people, tempting to bots. Named and marked so that
+          browser autofill and password managers leave it alone. */}
       <div
         aria-hidden="true"
         className="absolute -left-[9999px] size-px overflow-hidden"
       >
-        <label>
-          Company
-          <input name="company" type="text" tabIndex={-1} autoComplete="off" />
-        </label>
+        <input
+          name="hp"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          data-1p-ignore
+          data-lpignore="true"
+          data-form-type="other"
+        />
       </div>
 
       <button

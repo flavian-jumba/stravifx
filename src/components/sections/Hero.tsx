@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import { CandleField } from "@/components/CandleField";
 import { Eyebrow } from "@/components/Eyebrow";
 import { FilmPlayer } from "@/components/FilmPlayer";
@@ -14,7 +15,21 @@ export function Hero() {
       />
       <CandleField className="absolute inset-x-0 top-24 hidden h-[560px] w-full opacity-[0.13] [mask-image:linear-gradient(90deg,#000,transparent_26%,transparent_74%,#000)] md:block" />
 
-      <div className="relative mx-auto max-w-[1080px] px-6 pt-28 text-center sm:pt-44">
+      <div className="relative mx-auto max-w-[1080px] px-6 pt-24 text-center sm:pt-36">
+        <a
+          href="#learn"
+          className="group mb-7 inline-flex animate-word items-center gap-2.5 rounded-full border border-gold/30 bg-gold/[0.08] py-1.5 pl-1.5 pr-3.5 text-sm text-fg transition-colors duration-300 hover:border-gold/60 hover:bg-gold/[0.14] sm:mb-10"
+        >
+          <span className="rounded-full bg-gold px-2.5 py-1 text-[0.6875rem] font-bold uppercase leading-none tracking-[0.08em] text-black">
+            New
+          </span>
+          <span className="font-medium">Stravifx Learn</span>
+          <span className="hidden text-fg-2 min-[400px]:inline">
+            Forex for beginners
+          </span>
+          <ArrowRight className="size-4 text-gold transition-transform duration-300 ease-out-expo group-hover:translate-x-0.5" />
+        </a>
+
         <Eyebrow className="animate-word text-gold [animation-delay:60ms]">
           Stravifx for Android
         </Eyebrow>

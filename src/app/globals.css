@@ -114,6 +114,14 @@
     touch-action: manipulation;
   }
 
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--color-fg);
+    caret-color: var(--color-fg);
+    box-shadow: 0 0 0 1000px var(--color-ink-3) inset;
+  }
+
   ::selection {
     background-color: var(--color-gold);
     color: var(--color-ink);
