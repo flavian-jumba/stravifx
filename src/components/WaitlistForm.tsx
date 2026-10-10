@@ -53,7 +53,7 @@ export function WaitlistForm({
         body: JSON.stringify({
           fullName: form.get("fullName"),
           email: form.get("email"),
-          hp: form.get("hp"),
+          trap: form.get("trap") === "on",
         }),
       });
       const result = (await response.json().catch(() => null)) as {
@@ -111,21 +111,13 @@ export function WaitlistForm({
         />
       </label>
 
-      {/* Honeypot: hidden from people, tempting to bots. Named and marked so that
-          browser autofill and password managers leave it alone. */}
+      {/* Bot trap: a hidden checkbox. Autofill never ticks checkboxes, so real
+          visitors can't trip it; scripts that fill in every field do. */}
       <div
         aria-hidden="true"
         className="absolute -left-[9999px] size-px overflow-hidden"
       >
-        <input
-          name="hp"
-          type="text"
-          tabIndex={-1}
-          autoComplete="off"
-          data-1p-ignore
-          data-lpignore="true"
-          data-form-type="other"
-        />
+        <input name="trap" type="checkbox" tabIndex={-1} />
       </div>
 
       <button

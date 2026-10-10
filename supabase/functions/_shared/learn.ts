@@ -321,9 +321,10 @@ export async function handleCheckout(
     .trim()
     .toLowerCase();
 
-  // Honeypot: real visitors never see or fill this field. It is deliberately
-  // not called "company", "website" or anything else a browser would autofill.
-  if (String(body?.hp ?? "") !== "") {
+  // Bot trap: a hidden checkbox no person can see or tick. It is a checkbox, not
+  // a text box, because browsers and password managers autofill hidden text
+  // boxes and that locked real buyers out. Only a literal `true` counts.
+  if (body?.trap === true) {
     return fail(400, "invalid", "Something went wrong. Please try again.");
   }
   if (fullName.length < 2 || fullName.length > 80) {
