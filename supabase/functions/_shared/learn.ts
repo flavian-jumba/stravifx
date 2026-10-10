@@ -34,8 +34,19 @@ const json = (body: unknown, status = 200) =>
     headers: { ...CORS, "Content-Type": "application/json" },
   });
 
-const fail = (status: number, code: string, message: string) =>
-  json({ error: code, message }, status);
+const fail = (status: number, code: string, message: string, reason?: string) =>
+  json({ error: code, message, ...(reason ? { reason } : {}) }, status);
+
+/** Paystack said no. `reason` is Paystack's own wording, e.g. "Currency not supported by merchant". */
+class PaystackError extends Error {
+  constructor(
+    path: string,
+    status: number,
+    readonly reason: string,
+  ) {
+    super(`Paystack ${path} failed (${status}): ${reason}`);
+  }
+}
 
 // ── Configuration ───────────────────────────────────────────────────────────
 
@@ -168,8 +179,10 @@ async function paystack<T>(
     data?: T;
   } | null;
   if (!response.ok || !body?.status || !body.data) {
-    throw new Error(
-      `Paystack ${path} failed (${response.status}): ${body?.message ?? "no response body"}`,
+    throw new PaystackError(
+      path,
+      response.status,
+      body?.message ?? "no response body",
     );
   }
   return body.data;
@@ -341,33 +354,55 @@ export async function handleCheckout(
       }),
     });
 
-    const data = await paystack<{ authorization_url: string }>(
-      c,
-      "/transaction/initialize",
-      {
-        method: "POST",
+    let data: { authorization_url: string };
+    try {
+      data = await paystack<{ authorization_url: string }>(
+        c,
+        "/transaction/initialize",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            email,
+            amount: c.amountMinor,
+            currency: c.currency,
+            reference,
+            callback_url: `${returnOrigin(request, c)}/learn/welcome`,
+            metadata: {
+              product: "Stravifx Learn waitlist",
+              custom_fields: [
+                {
+                  display_name: "Name",
+                  variable_name: "full_name",
+                  value: fullName,
+                },
+              ],
+            },
+          }),
+        },
+      );
+    } catch (error) {
+      // Paystack refused, so this seat can never be paid: don't leave it pending.
+      await db(c, `?reference=eq.${reference}&status=eq.pending`, {
+        method: "PATCH",
+        headers: { Prefer: "return=minimal" },
         body: JSON.stringify({
-          email,
-          amount: c.amountMinor,
-          currency: c.currency,
-          reference,
-          callback_url: `${returnOrigin(request, c)}/learn/welcome`,
-          metadata: {
-            product: "Stravifx Learn waitlist",
-            custom_fields: [
-              {
-                display_name: "Name",
-                variable_name: "full_name",
-                value: fullName,
-              },
-            ],
-          },
+          status: "failed",
+          updated_at: new Date().toISOString(),
         }),
-      },
-    );
+      }).catch(() => undefined);
+      throw error;
+    }
     return json({ url: data.authorization_url });
   } catch (error) {
     console.error("[learn] checkout failed", error);
+    if (error instanceof PaystackError) {
+      return fail(
+        502,
+        "paystack",
+        "We couldn't start the payment. Please try again in a moment.",
+        error.reason,
+      );
+    }
     return fail(
       502,
       "unavailable",
