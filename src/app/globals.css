@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ===========================================================================
+   Stravifx — design foundation
+   Ink (black) is the default world; paper is the counter-mode, as in the film.
+   One accent: Stravifx gold. Green / red / cyan appear only inside app data.
+   =========================================================================== */
+
+@theme inline {
+  --font-sans:
+    var(--font-figtree), ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", monospace;
+  --font-pixel: var(--font-departure), ui-monospace, monospace;
+}
+
+@theme {
+  /* Ink mode */
+  --color-ink: #000000;
+  --color-ink-1: #0a0a0b;
+  --color-ink-2: #111113;
+  --color-ink-3: #18181b;
+  --color-fg: #f5f5f7;
+  --color-fg-2: #a1a1a6;
+  --color-fg-3: #6e6e73;
+
+  /* Paper mode */
+  --color-paper: #f4f4ef;
+  --color-paper-card: #fafaf5;
+  --color-paper-line: #e5e5e0;
+  --color-ink-text: #1d1d1f;
+  --color-ink-muted: #6e6e68;
+
+  /* The one accent */
+  --color-gold: #f6ba18;
+  --color-gold-soft: #ffe08a;
+  --color-gold-deep: #a87800;
+
+  /* App data only */
+  --color-cyan: #1ec6e4;
+  --color-buy: #30c654;
+  --color-sell: #f04236;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-marquee: marquee 48s linear infinite;
+  --animate-marquee-reverse: marquee 56s linear infinite reverse;
+  --animate-word: word-in 0.9s var(--ease-out-expo) both;
+  --animate-twinkle: twinkle 3.6s ease-in-out infinite;
+  --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes word-in {
+    from {
+      opacity: 0;
+      filter: blur(6px);
+      translate: 0 0.18em;
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+      translate: 0 0;
+    }
+  }
+
+  @keyframes twinkle {
+    0%,
+    100% {
+      opacity: 0.55;
+      scale: 0.85;
+    }
+    50% {
+      opacity: 1;
+      scale: 1.1;
+    }
+  }
+
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background-color: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  /* Scroll reveal — toggled by <Reveal> */
+  .reveal {
+    opacity: 0;
+    translate: 0 28px;
+    transition:
+      opacity 1s var(--ease-out-expo),
+      translate 1s var(--ease-out-expo);
+    will-change: opacity, translate;
+  }
+
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    translate: 0 0;
+  }
+
+  /* Metallic gold, sampled from the wordmark */
+  .text-gold-gradient {
+    background-image: linear-gradient(
+      180deg,
+      #fff1b8 0%,
+      #f6ba18 46%,
+      #b8860b 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Hairline that fades at both ends */
+  .rule-fade {
+    height: 1px;
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgb(255 255 255 / 0.14) 20%,
+      rgb(255 255 255 / 0.14) 80%,
+      transparent
+    );
+  }
+
+  .mask-fade-x {
+    mask-image: linear-gradient(
+      90deg,
+      transparent,
+      #000 12%,
+      #000 88%,
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
