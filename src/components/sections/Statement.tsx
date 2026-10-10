@@ -52,10 +52,10 @@ export function Statement() {
   }, []);
 
   return (
-    <section id="why" className="bg-ink px-6 py-28 sm:py-44">
+    <section id="why" className="bg-ink px-6 py-24 sm:py-44">
       <p
         ref={ref}
-        className="mx-auto max-w-[1000px] text-[clamp(1.875rem,4.6vw,3.75rem)] font-semibold leading-[1.12] tracking-[-0.03em]"
+        className="mx-auto max-w-[1000px] text-[clamp(1.625rem,7.4vw,3.75rem)] font-semibold leading-[1.12] tracking-[-0.03em]"
       >
         {WORDS.map(({ word, lineIndex }, i) => (
           <span

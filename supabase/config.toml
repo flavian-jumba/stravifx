@@ -1,0 +1,15 @@
+# Supabase project settings used by the CLI when deploying.
+project_id = "stravifx"
+
+# These three functions are called by browsers and by Paystack, neither of which
+# sends a Supabase login token, so the gateway's JWT check is turned off.
+# Each function does its own checks (input validation, Paystack signature,
+# re-verifying every payment with Paystack).
+[functions.learn-checkout]
+verify_jwt = false
+
+[functions.learn-confirm]
+verify_jwt = false
+
+[functions.paystack-webhook]
+verify_jwt = false

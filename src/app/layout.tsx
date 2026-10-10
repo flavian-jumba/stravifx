@@ -50,6 +50,8 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   themeColor: "#000000",
   colorScheme: "dark",
+  // Let the page run under the notch; the nav and footer pad themselves back in.
+  viewportFit: "cover",
 };
 
 export default function RootLayout({

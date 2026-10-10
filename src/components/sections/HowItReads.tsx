@@ -108,7 +108,7 @@ function Device({ active, className }: { active: number; className?: string }) {
               alt={isActive ? screen.alt : ""}
               aria-hidden={!isActive}
               fill
-              sizes="(min-width: 1024px) 320px, 260px"
+              sizes="(min-width: 1024px) 320px, 240px"
               className={cn(
                 "transition-opacity duration-[900ms] ease-out-expo",
                 screen.fit,
@@ -130,41 +130,79 @@ function Device({ active, className }: { active: number; className?: string }) {
   );
 }
 
-/** The film's progress HUD, reprised: a step label and six segments. */
-function Hud({ active }: { active: number }) {
+/** The film's progress HUD, reprised: a step label and six tappable segments. */
+function Hud({
+  active,
+  onSelect,
+}: {
+  active: number;
+  onSelect: (index: number) => void;
+}) {
   return (
-    <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-ink-2/80 px-5 py-3 backdrop-blur-md">
-      <Sparkle className="size-3.5 text-gold" />
-      <span className="w-[4.5rem] font-mono text-xs uppercase tracking-[0.24em] text-fg">
+    <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-ink-2/80 pl-4 pr-2 backdrop-blur-md sm:gap-4 sm:pl-5 sm:pr-3">
+      <Sparkle className="size-3.5 shrink-0 text-gold" />
+      <span
+        aria-live="polite"
+        className="w-16 font-mono text-xs uppercase tracking-[0.24em] text-fg sm:w-[4.5rem]"
+      >
         {STEPS[active].label}
       </span>
-      <span className="flex gap-1.5" aria-hidden="true">
+      <span className="flex">
         {STEPS.map((step, i) => (
-          <span
+          <button
             key={step.label}
-            className={cn(
-              "h-1 w-7 rounded-full transition-colors duration-500",
-              i <= active ? "bg-fg" : "bg-white/15",
-            )}
-          />
+            type="button"
+            onClick={() => onSelect(i)}
+            aria-label={`Step ${i + 1}: ${step.label}`}
+            aria-current={i === active ? "step" : undefined}
+            className="group px-[3px] py-5"
+          >
+            <span
+              className={cn(
+                "block h-1 w-5 rounded-full transition-colors duration-500 group-hover:bg-gold min-[360px]:w-6 sm:w-7",
+                i <= active ? "bg-fg" : "bg-white/15",
+              )}
+            />
+          </button>
         ))}
       </span>
     </div>
   );
 }
 
+function StepCopy({ step, index }: { step: Step; index: number }) {
+  return (
+    <>
+      <p className="font-mono text-xs uppercase tracking-[0.28em] text-gold">
+        <span className="font-pixel text-sm tracking-normal">0{index + 1}</span>
+        <span className="mx-3 text-fg-3">—</span>
+        {step.label}
+      </p>
+      <h3 className="mt-4 text-[clamp(1.75rem,4vw,3.5rem)] font-semibold leading-[1.04] tracking-[-0.035em] lg:mt-5">
+        {step.title}
+      </h3>
+      <p className="mt-3 max-w-[460px] text-[1.0625rem] leading-[1.5] text-fg-2 sm:text-xl lg:mt-5">
+        {step.body}
+      </p>
+    </>
+  );
+}
+
 export function HowItReads() {
+  // Desktop: the step crossing the middle of the viewport drives the pinned phone.
   const [active, setActive] = useState(0);
   const stepRefs = useRef<(HTMLLIElement | null)[]>([]);
+  // Phones and tablets: a swipeable deck; the centred card drives the HUD.
+  const [card, setCard] = useState(0);
+  const deckRef = useRef<HTMLOListElement>(null);
+  const cardRefs = useRef<(HTMLLIElement | null)[]>([]);
 
   useEffect(() => {
-    // A step becomes active when it crosses the vertical middle of the viewport.
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            const index = Number((entry.target as HTMLElement).dataset.index);
-            setActive(index);
+            setActive(Number((entry.target as HTMLElement).dataset.index));
           }
         }
       },
@@ -174,13 +212,43 @@ export function HowItReads() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const deck = deckRef.current;
+    if (!deck) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setCard(Number((entry.target as HTMLElement).dataset.index));
+          }
+        }
+      },
+      { root: deck, threshold: 0.6 },
+    );
+    cardRefs.current.forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const goToStep = (index: number) =>
+    stepRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    });
+
+  const goToCard = (index: number) =>
+    cardRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+
   return (
     <section id="how" className="relative bg-ink-1">
       <div className="rule-fade" />
-      <div className="mx-auto max-w-[1240px] px-6 pt-28 sm:px-8 sm:pt-40">
+      <div className="mx-auto max-w-[1240px] px-6 pt-24 sm:px-8 sm:pt-40">
         <Reveal className="max-w-[820px]">
           <Eyebrow>How it works</Eyebrow>
-          <h2 className="mt-5 text-[clamp(2.5rem,6.4vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.04em]">
+          <h2 className="mt-5 text-[clamp(2rem,9.6vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.04em]">
             From chart to plan
             <br />
             <span className="text-fg-3">in six steps.</span>
@@ -188,16 +256,14 @@ export function HowItReads() {
         </Reveal>
       </div>
 
-      <div className="mx-auto grid max-w-[1240px] gap-x-16 px-6 sm:px-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
-        {/* Sticky stage (desktop) */}
-        <div className="hidden lg:block">
-          <div className="sticky top-0 flex h-screen flex-col items-center justify-center gap-7">
-            <Hud active={active} />
-            <Device active={active} className="h-[min(68vh,640px)]" />
-          </div>
+      {/* Desktop: pinned phone, scrolling steps */}
+      <div className="mx-auto hidden max-w-[1240px] grid-cols-2 gap-x-16 px-8 lg:grid">
+        <div className="sticky top-0 flex h-screen flex-col items-center justify-center gap-7">
+          <Hud active={active} onSelect={goToStep} />
+          <Device active={active} className="h-[min(68vh,640px)]" />
         </div>
 
-        <ol className="py-16 lg:py-0">
+        <ol>
           {STEPS.map((step, i) => (
             <li
               key={step.label}
@@ -207,34 +273,52 @@ export function HowItReads() {
               id={`how-${step.label.toLowerCase()}`}
               data-index={i}
               className={cn(
-                "flex flex-col justify-center py-12 transition-opacity duration-700 lg:min-h-[78vh] lg:py-0",
-                i === active ? "lg:opacity-100" : "lg:opacity-25",
+                "flex min-h-[78vh] flex-col justify-center transition-opacity duration-700",
+                i === active ? "opacity-100" : "opacity-25",
               )}
             >
-              <p className="font-mono text-xs uppercase tracking-[0.28em] text-gold">
-                <span className="font-pixel text-sm tracking-normal">
-                  0{i + 1}
-                </span>
-                <span className="mx-3 text-fg-3">—</span>
-                {step.label}
-              </p>
-              <h3 className="mt-5 text-[clamp(2rem,4vw,3.5rem)] font-semibold leading-[1.02] tracking-[-0.035em]">
-                {step.title}
-              </h3>
-              <p className="mt-5 max-w-[460px] text-lg leading-[1.5] text-fg-2 sm:text-xl">
-                {step.body}
-              </p>
-
-              {/* Inline device (mobile / tablet) */}
-              <Device
-                active={i}
-                className="mt-10 w-[min(72vw,280px)] lg:hidden"
-              />
+              <StepCopy step={step} index={i} />
             </li>
           ))}
         </ol>
       </div>
-      <div className="h-16 lg:h-24" />
+
+      {/* Phones and tablets: swipe through the steps */}
+      <div className="pb-20 pt-10 lg:hidden">
+        <div className="flex justify-center px-4">
+          <Hud active={card} onSelect={goToCard} />
+        </div>
+        <ol
+          ref={deckRef}
+          aria-label="Six steps, swipe to move between them"
+          className="mt-6 flex snap-x snap-mandatory gap-3 overflow-x-auto overscroll-x-contain scroll-smooth px-6 pb-2 [-webkit-overflow-scrolling:touch] [scrollbar-width:none] sm:gap-5 sm:px-8 [&::-webkit-scrollbar]:hidden"
+        >
+          {STEPS.map((step, i) => (
+            <li
+              key={step.label}
+              ref={(el) => {
+                cardRefs.current[i] = el;
+              }}
+              data-index={i}
+              className={cn(
+                "flex w-[82vw] max-w-[380px] shrink-0 snap-center flex-col rounded-[32px] border bg-ink-2 px-6 pb-8 pt-6 transition-[border-color,opacity] duration-500",
+                i === card
+                  ? "border-white/[0.14] opacity-100"
+                  : "border-white/[0.06] opacity-60 sm:opacity-100",
+              )}
+            >
+              <Device active={i} className="mx-auto w-[64%]" />
+              <div className="mt-8">
+                <StepCopy step={step} index={i} />
+              </div>
+            </li>
+          ))}
+        </ol>
+        <p className="mt-5 text-center font-mono text-[0.6875rem] uppercase tracking-[0.24em] text-fg-3">
+          Swipe · {card + 1} of {STEPS.length}
+        </p>
+      </div>
+      <div className="hidden h-24 lg:block" />
     </section>
   );
 }

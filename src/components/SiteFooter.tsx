@@ -3,7 +3,7 @@ import { NAV_LINKS, SITE } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10 bg-ink-1 py-14">
+    <footer className="border-t border-white/10 bg-ink-1 pb-[calc(3.5rem+env(safe-area-inset-bottom))] pt-14">
       <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <a href="#top" aria-label="Back to top">
@@ -16,12 +16,12 @@ export function SiteFooter() {
             />
           </a>
           <nav aria-label="Footer">
-            <ul className="flex flex-wrap gap-x-7 gap-y-3">
+            <ul className="-my-2 flex flex-wrap gap-x-7">
               {NAV_LINKS.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-fg-2 transition-colors duration-300 hover:text-fg"
+                    className="block py-3 text-sm text-fg-2 transition-colors duration-300 hover:text-fg"
                   >
                     {link.label}
                   </a>
@@ -32,7 +32,7 @@ export function SiteFooter() {
                   href={SITE.playStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-fg-2 transition-colors duration-300 hover:text-fg"
+                  className="block py-3 text-sm text-fg-2 transition-colors duration-300 hover:text-fg"
                 >
                   Google Play
                 </a>

@@ -28,7 +28,7 @@ export function Faq() {
   return (
     <section
       id="faq"
-      className="border-t border-paper-line bg-paper pb-28 pt-24 text-ink-text sm:pb-40 sm:pt-32"
+      className="border-t border-paper-line bg-paper pb-24 pt-20 text-ink-text sm:pb-40 sm:pt-32"
     >
       <div className="mx-auto grid max-w-[1240px] gap-12 px-6 sm:px-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <Reveal>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Pause, Play, Volume2, VolumeX } from "lucide-react";
+import { Maximize2, Pause, Play, Volume2, VolumeX } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { SITE } from "@/lib/site";
 
@@ -87,6 +87,16 @@ export function FilmPlayer() {
     return () => window.removeEventListener(WATCH_FILM_EVENT, onWatch);
   }, []);
 
+  // Fullscreen hides our overlay, so hand over to the native controls there.
+  useEffect(() => {
+    const onChange = () => {
+      const video = videoRef.current;
+      if (video) video.controls = document.fullscreenElement === video;
+    };
+    document.addEventListener("fullscreenchange", onChange);
+    return () => document.removeEventListener("fullscreenchange", onChange);
+  }, []);
+
   const onTimeUpdate = useCallback(() => {
     const video = videoRef.current;
     const bar = barRef.current;
@@ -103,6 +113,18 @@ export function FilmPlayer() {
     } else {
       userPaused.current = true;
       video.pause();
+    }
+  };
+
+  const goFullscreen = () => {
+    const video = videoRef.current as
+      (HTMLVideoElement & { webkitEnterFullscreen?: () => void }) | null;
+    if (!video) return;
+    if (video.requestFullscreen) {
+      video.requestFullscreen().catch(() => undefined);
+    } else {
+      // iOS Safari only exposes fullscreen on the <video> element itself.
+      video.webkitEnterFullscreen?.();
     }
   };
 
@@ -142,12 +164,12 @@ export function FilmPlayer() {
           onClick={togglePlay}
         />
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-3 sm:p-5">
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between p-2.5 sm:p-5">
           <button
             type="button"
             onClick={togglePlay}
             aria-label={playing ? "Pause film" : "Play film"}
-            className="pointer-events-auto grid size-10 place-items-center rounded-full border border-white/15 bg-black/55 text-white backdrop-blur-md transition-colors duration-300 hover:bg-black/75 sm:size-11"
+            className="pointer-events-auto grid size-11 place-items-center rounded-full border border-white/15 bg-black/55 text-white backdrop-blur-md transition-colors duration-300 hover:bg-black/75 sm:size-11"
           >
             {playing ? (
               <Pause className="size-4 fill-current" />
@@ -156,19 +178,32 @@ export function FilmPlayer() {
             )}
           </button>
 
-          <button
-            type="button"
-            onClick={toggleSound}
-            aria-pressed={!muted}
-            className="pointer-events-auto flex h-10 items-center gap-2 rounded-full border border-white/15 bg-black/55 px-4 text-[0.8125rem] font-medium text-white backdrop-blur-md transition-colors duration-300 hover:bg-black/75 sm:h-11"
-          >
-            {muted ? (
-              <VolumeX className="size-4" />
-            ) : (
-              <Volume2 className="size-4" />
-            )}
-            {muted ? "Sound off" : "Sound on"}
-          </button>
+          <div className="pointer-events-auto flex items-center gap-2">
+            <button
+              type="button"
+              onClick={goFullscreen}
+              aria-label="Watch full screen"
+              className="grid size-11 place-items-center rounded-full border border-white/15 bg-black/55 text-white backdrop-blur-md transition-colors duration-300 hover:bg-black/75 sm:size-11"
+            >
+              <Maximize2 className="size-4" />
+            </button>
+            <button
+              type="button"
+              onClick={toggleSound}
+              aria-pressed={!muted}
+              aria-label={muted ? "Turn sound on" : "Turn sound off"}
+              className="flex h-11 min-w-11 items-center justify-center gap-2 rounded-full border border-white/15 bg-black/55 px-3 text-[0.8125rem] font-medium text-white backdrop-blur-md transition-colors duration-300 hover:bg-black/75 sm:h-11 sm:px-4"
+            >
+              {muted ? (
+                <VolumeX className="size-4" />
+              ) : (
+                <Volume2 className="size-4" />
+              )}
+              <span className="max-[380px]:sr-only">
+                {muted ? "Sound off" : "Sound on"}
+              </span>
+            </button>
+          </div>
         </div>
 
         <div className="absolute inset-x-0 bottom-0 h-[3px] bg-white/10">

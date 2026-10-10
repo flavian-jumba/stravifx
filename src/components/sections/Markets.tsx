@@ -68,11 +68,11 @@ function Ticker({
 
 export function Markets() {
   return (
-    <section id="markets" className="overflow-hidden bg-ink-1 py-28 sm:py-40">
+    <section id="markets" className="overflow-hidden bg-ink-1 py-24 sm:py-40">
       <div className="rule-fade -mt-28 mb-28 sm:-mt-40 sm:mb-40" />
       <Reveal className="mx-auto max-w-[900px] px-6 text-center">
         <Eyebrow>Markets</Eyebrow>
-        <h2 className="mt-5 text-[clamp(2.5rem,6.4vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.04em]">
+        <h2 className="mt-5 text-[clamp(2rem,9.6vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.04em]">
           Every market.
           <br />
           <span className="text-fg-3">Every timeframe.</span>

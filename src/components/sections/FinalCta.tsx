@@ -8,7 +8,8 @@ export function FinalCta() {
   return (
     <section
       id="download"
-      className="relative overflow-hidden bg-ink px-6 py-32 text-center sm:py-48">
+      className="relative overflow-hidden bg-ink px-6 py-32 text-center sm:py-48"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(50%_55%_at_50%_100%,rgba(246,186,24,0.20),transparent_70%)]"
@@ -30,7 +31,7 @@ export function FinalCta() {
           <Sparkle className="absolute right-[4.5%] top-[4%] size-6 animate-twinkle text-[#fff6c8] drop-shadow-[0_0_14px_rgba(246,186,24,0.9)]" />
         </div>
 
-        <h2 className="mt-10 text-[clamp(2.75rem,8vw,6.5rem)] font-semibold leading-[0.95] tracking-[-0.045em]">
+        <h2 className="mt-10 text-[clamp(2.125rem,11vw,6.5rem)] font-semibold leading-[0.95] tracking-[-0.045em]">
           Read any chart.
           <br />
           <span className="text-gold-gradient">Trade with a plan.</span>

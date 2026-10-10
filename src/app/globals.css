@@ -107,6 +107,13 @@
     text-rendering: optimizeLegibility;
   }
 
+  a,
+  button,
+  summary {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
   ::selection {
     background-color: var(--color-gold);
     color: var(--color-ink);

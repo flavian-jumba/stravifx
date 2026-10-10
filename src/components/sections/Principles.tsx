@@ -18,16 +18,13 @@ const PRINCIPLES = [
 /** The paper-mode section: the film's counter-world, used here for plain talk. */
 export function Principles() {
   return (
-    <section
-      id="principles"
-      className="bg-paper py-28 text-ink-text sm:py-40"
-    >
+    <section id="principles" className="bg-paper py-28 text-ink-text sm:py-40">
       <div className="mx-auto max-w-[1240px] px-6 sm:px-8">
         <Reveal className="max-w-[900px]">
           <p className="font-mono text-[0.6875rem] uppercase tracking-[0.28em] text-ink-muted sm:text-xs">
             Principles
           </p>
-          <h2 className="mt-5 text-[clamp(2.5rem,6.4vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.04em]">
+          <h2 className="mt-5 text-[clamp(2rem,9.6vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.04em]">
             Straight with you.
           </h2>
           <p className="mt-7 max-w-[640px] text-[clamp(1.125rem,1.7vw,1.4375rem)] leading-[1.4] text-ink-muted">

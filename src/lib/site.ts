@@ -3,7 +3,7 @@
 export const SITE = {
   name: "Stravifx",
   /** Canonical origin, used for metadata and social cards. */
-  url: "https://stravifx.com",
+  url: "https://www.stravifx.app",
   tagline: "Any chart. A clear plan.",
   description:
     "Point your camera at a chart or pick a live market. Stravifx reads the structure, makes a call and lays out the trade: entry, stop, targets and position size.",
@@ -23,6 +23,7 @@ export const NAV_LINKS = [
   { label: "How it works", href: "#how" },
   { label: "Features", href: "#features" },
   { label: "Markets", href: "#markets" },
+  { label: "Learn", href: "#learn" },
   { label: "Principles", href: "#principles" },
   { label: "FAQ", href: "#faq" },
 ] as const;

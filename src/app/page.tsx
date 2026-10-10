@@ -3,6 +3,7 @@ import { Features } from "@/components/sections/Features";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Hero } from "@/components/sections/Hero";
 import { HowItReads } from "@/components/sections/HowItReads";
+import { Learn } from "@/components/sections/Learn";
 import { Markets } from "@/components/sections/Markets";
 import { Principles } from "@/components/sections/Principles";
 import { Statement } from "@/components/sections/Statement";
@@ -19,6 +20,7 @@ export default function Home() {
         <HowItReads />
         <Features />
         <Markets />
+        <Learn />
         <Principles />
         <Faq />
         <FinalCta />

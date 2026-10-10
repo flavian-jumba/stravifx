@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { PlayBadge } from "@/components/PlayBadge";
 import { NAV_LINKS, SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
@@ -20,7 +21,7 @@ export function SiteNav() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 border-b transition-colors duration-500",
+        "fixed inset-x-0 top-0 z-50 border-b pt-[env(safe-area-inset-top)] transition-colors duration-500",
         scrolled || open
           ? "border-white/10 bg-black/85 backdrop-blur-xl backdrop-saturate-150"
           : "border-transparent bg-transparent",
@@ -30,7 +31,7 @@ export function SiteNav() {
         aria-label="Primary"
         className="mx-auto flex h-14 max-w-[1240px] items-center justify-between px-5 sm:px-8"
       >
-        <a href="#top" aria-label="Stravifx home" className="shrink-0">
+        <a href="#top" aria-label="Stravifx home" className="shrink-0 py-1.5">
           <Image
             src="/brand/stravifx-logo.png"
             alt="Stravifx"
@@ -41,7 +42,7 @@ export function SiteNav() {
           />
         </a>
 
-        <ul className="hidden items-center gap-8 md:flex">
+        <ul className="hidden items-center gap-6 md:flex lg:gap-8">
           {NAV_LINKS.map((link) => (
             <li key={link.href}>
               <a
@@ -54,12 +55,12 @@ export function SiteNav() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1">
           <a
             href={SITE.playStoreUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-gold px-4 py-1.5 text-[0.8125rem] font-semibold text-black transition-colors duration-300 hover:bg-gold-soft"
+            className="flex h-10 items-center rounded-full bg-gold px-4 text-[0.8125rem] font-semibold text-black transition-colors duration-300 hover:bg-gold-soft active:scale-[0.97]"
           >
             Get the app
           </a>
@@ -69,7 +70,7 @@ export function SiteNav() {
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
-            className="grid size-9 place-items-center rounded-full text-fg md:hidden"
+            className="-mr-2 grid size-11 place-items-center rounded-full text-fg md:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -83,7 +84,7 @@ export function SiteNav() {
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
         )}
       >
-        <ul className="min-h-0 px-5">
+        <ul className="max-h-[calc(100dvh-3.5rem)] min-h-0 overflow-y-auto overscroll-contain px-5">
           {NAV_LINKS.map((link) => (
             <li key={link.href} className="border-t border-white/10">
               <a
@@ -95,7 +96,9 @@ export function SiteNav() {
               </a>
             </li>
           ))}
-          <li aria-hidden="true" className="h-6" />
+          <li className="flex justify-center border-t border-white/10 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6">
+            <PlayBadge />
+          </li>
         </ul>
       </div>
     </header>

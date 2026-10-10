@@ -20,7 +20,7 @@ type TileProps = {
 function Tile({ kicker, title, body, className, children, note }: TileProps) {
   return (
     <Reveal className={cn("h-full", className)}>
-      <article className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/[0.07] bg-ink-2 p-7 transition-colors duration-500 hover:border-white/[0.14] sm:rounded-[36px] sm:p-9">
+      <article className="group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-white/[0.07] bg-ink-2 p-6 transition-colors duration-500 hover:border-white/[0.14] sm:rounded-[36px] sm:p-9">
         <div>
           <Eyebrow>{kicker}</Eyebrow>
           <h3 className="mt-4 text-[clamp(1.625rem,2.4vw,2.25rem)] font-semibold leading-[1.06] tracking-[-0.03em]">
@@ -97,7 +97,7 @@ function Ladder() {
           <li
             key={rung.tag}
             className={cn(
-              "flex items-center gap-4 rounded-2xl border px-4 py-3.5 sm:gap-5 sm:rounded-[22px] sm:px-6 sm:py-5",
+              "flex items-center gap-3 rounded-2xl border px-3.5 py-3.5 sm:gap-5 sm:rounded-[22px] sm:px-6 sm:py-5",
               entry
                 ? "border-cyan/70 bg-[#0e2a30] shadow-[0_0_48px_-12px_rgba(30,198,228,0.55)]"
                 : "border-white/[0.06] bg-ink-3",
@@ -110,7 +110,7 @@ function Ladder() {
               )}
             />
             <div className="min-w-0 flex-1">
-              <p className="truncate text-base font-medium text-fg sm:text-xl">
+              <p className="text-[0.9375rem] font-medium leading-tight text-fg sm:text-xl">
                 <span className={cn("font-semibold", TONE[rung.tone].text)}>
                   {rung.tag}
                 </span>{" "}
@@ -120,7 +120,7 @@ function Ladder() {
             </div>
             <p
               className={cn(
-                "font-pixel text-2xl sm:text-4xl",
+                "font-pixel text-[1.375rem] sm:text-4xl",
                 entry ? "text-cyan" : "text-fg",
               )}
             >
@@ -248,13 +248,13 @@ const BADGE: Record<Entry["badge"], string> = {
 
 function Journal() {
   return (
-    <ul className="flex flex-col gap-2.5">
+    <ul className="@container flex flex-col gap-2.5">
       {ENTRIES.map((entry) => (
         <li
           key={entry.levels}
           className="flex items-center gap-3.5 rounded-2xl border border-white/[0.06] bg-ink-3 p-3"
         >
-          <span className="grid size-11 shrink-0 place-items-center rounded-xl border border-cyan/25 bg-[#11313a] text-cyan">
+          <span className="hidden size-11 shrink-0 place-items-center rounded-xl border border-cyan/25 bg-[#11313a] text-cyan @[300px]:grid">
             <Bolt className="size-4" />
           </span>
           <div className="min-w-0 flex-1">
@@ -422,11 +422,11 @@ function Glossary() {
 
 export function Features() {
   return (
-    <section id="features" className="bg-ink py-28 sm:py-40">
+    <section id="features" className="bg-ink py-24 sm:py-40">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-8">
         <Reveal className="mx-auto max-w-[900px] px-2 text-center">
           <Eyebrow>Features</Eyebrow>
-          <h2 className="mt-5 text-[clamp(2.5rem,6.4vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.04em]">
+          <h2 className="mt-5 text-[clamp(2rem,9.6vw,5.25rem)] font-semibold leading-[0.98] tracking-[-0.04em]">
             Your whole trading desk.{" "}
             <span className="text-gold-gradient">One app.</span>
           </h2>
