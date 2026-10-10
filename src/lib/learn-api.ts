@@ -4,7 +4,17 @@
  * the project's public URL to reach them.
  */
 
-const FUNCTIONS_BASE = `${(process.env.NEXT_PUBLIC_SUPABASE_URL ?? "").replace(/\/+$/, "")}/functions/v1`;
+/**
+ * The Supabase project's public address. It is not a secret (every visitor's
+ * browser calls it), so it has a built-in default and the site works on any
+ * host without configuration. NEXT_PUBLIC_SUPABASE_URL overrides it.
+ */
+const SUPABASE_URL = (
+  process.env.NEXT_PUBLIC_SUPABASE_URL ||
+  "https://goizzlaqynwdzoueqvmp.supabase.co"
+).replace(/\/+$/, "");
+
+const FUNCTIONS_BASE = `${SUPABASE_URL}/functions/v1`;
 
 export const LEARN_CHECKOUT_ENDPOINT = `${FUNCTIONS_BASE}/learn-checkout`;
 
@@ -20,7 +30,6 @@ const CLOSED: LearnOffer = { open: false, priceLabel: "", refundPolicy: "" };
 
 /** Asks Supabase for the current offer. Re-checked every five minutes. */
 export async function fetchLearnOffer(): Promise<LearnOffer> {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL) return CLOSED;
   try {
     const response = await fetch(LEARN_CHECKOUT_ENDPOINT, {
       next: { revalidate: 300 },
@@ -47,7 +56,6 @@ export type LearnConfirmation = {
 export async function confirmLearnPayment(
   reference: string,
 ): Promise<LearnConfirmation> {
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL) return { state: "unknown" };
   try {
     const response = await fetch(
       `${FUNCTIONS_BASE}/learn-confirm?reference=${encodeURIComponent(reference)}`,
