@@ -157,7 +157,7 @@ export function FilmPlayer() {
           loop
           playsInline
           preload="metadata"
-          aria-label="Stravifx product film: from a noisy chart to a trade plan with entry, stop and targets."
+          aria-label="StraviFX product film: from a noisy chart to a trade plan with entry, stop and targets."
           onPlay={() => setPlaying(true)}
           onPause={() => setPlaying(false)}
           onTimeUpdate={onTimeUpdate}

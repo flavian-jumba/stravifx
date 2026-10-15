@@ -15,7 +15,7 @@ export function PlayBadge({ className, size = "md" }: PlayBadgeProps) {
       href={SITE.playStoreUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Get Stravifx on Google Play"
+      aria-label="Get StraviFX on Google Play"
       className={cn(
         "inline-block transition-transform duration-300 ease-out-expo hover:scale-[1.03] active:scale-[0.98]",
         className,

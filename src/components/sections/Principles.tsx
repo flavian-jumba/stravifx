@@ -29,7 +29,7 @@ export function Principles() {
           </h2>
           <p className="mt-7 max-w-[640px] text-[clamp(1.125rem,1.7vw,1.4375rem)] leading-[1.4] text-ink-muted">
             Trading is risky, and a tool that reads charts should say so. Here
-            is what Stravifx will and won’t tell you.
+            is what StraviFX will and won’t tell you.
           </p>
         </Reveal>
 

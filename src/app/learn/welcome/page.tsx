@@ -4,7 +4,7 @@ import { Sparkle } from "@/components/icons";
 import { confirmLearnPayment, type LearnConfirmation } from "@/lib/learn-api";
 
 export const metadata: Metadata = {
-  title: "Stravifx Learn — Waitlist",
+  title: { absolute: "StraviFX Learn — Waitlist" },
   robots: { index: false, follow: false },
 };
 
@@ -19,8 +19,8 @@ const COPY: Record<
   paid: {
     kicker: "Payment received",
     title: "You’re on the waitlist.",
-    body: "Your seat for the first Stravifx Learn cohort is reserved. We’ll email you before it opens.",
-    cta: "Back to Stravifx",
+    body: "Your seat for the first StraviFX Learn cohort is reserved. We’ll email you before it opens.",
+    cta: "Back to StraviFX",
     href: "/",
   },
   pending: {
@@ -68,7 +68,7 @@ export default async function LearnWelcomePage({ searchParams }: Props) {
       <div className="relative w-full max-w-[640px]">
         <Image
           src="/brand/stravifx-logo.png"
-          alt="Stravifx"
+          alt="StraviFX"
           width={480}
           height={189}
           priority

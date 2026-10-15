@@ -1,5 +1,5 @@
 /**
- * Stravifx Learn — the curriculum shown in the Learn section.
+ * StraviFX Learn — the curriculum shown in the Learn section.
  * Price, currency and refund wording are server settings: see .env.example.
  */
 

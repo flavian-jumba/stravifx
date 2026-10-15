@@ -27,7 +27,7 @@ export async function Learn() {
                   <span className="text-gold-gradient">yourself.</span>
                 </h2>
                 <p className="mt-6 max-w-[520px] text-[1.0625rem] leading-[1.5] text-fg-2 sm:text-xl">
-                  Stravifx Learn is a forex curriculum for beginners, built on
+                  StraviFX Learn is a forex curriculum for beginners, built on
                   the same ideas as the app: structure first, risk before size,
                   and a written plan for every trade. Pay once to reserve your
                   place on the waitlist for the first cohort.

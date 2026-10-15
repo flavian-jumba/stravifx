@@ -1,6 +1,6 @@
 type IconProps = { className?: string };
 
-/** The four-point star from the Stravifx wordmark. */
+/** The four-point star from the StraviFX wordmark. */
 export function Sparkle({ className }: IconProps) {
   return (
     <svg viewBox="0 0 48 48" aria-hidden="true" className={className}>

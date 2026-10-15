@@ -23,7 +23,7 @@ export function Hero() {
           <span className="rounded-full bg-gold px-2.5 py-1 text-[0.6875rem] font-bold uppercase leading-none tracking-[0.08em] text-black">
             New
           </span>
-          <span className="font-medium">Stravifx Learn</span>
+          <span className="font-medium">StraviFX Learn</span>
           <span className="hidden text-fg-2 min-[400px]:inline">
             Forex for beginners
           </span>
@@ -31,7 +31,7 @@ export function Hero() {
         </a>
 
         <Eyebrow className="animate-word text-gold [animation-delay:60ms]">
-          Stravifx for Android
+          StraviFX for Android
         </Eyebrow>
 
         <h1 className="mt-5 text-[clamp(2.5rem,13.2vw,8.25rem)] font-semibold leading-[0.92] sm:mt-6 tracking-[-0.045em] text-fg">
@@ -57,7 +57,7 @@ export function Hero() {
         </h1>
 
         <p className="mx-auto mt-6 max-w-[660px] animate-word text-[clamp(1.125rem,1.7vw,1.4375rem)] leading-[1.4] text-fg-2 [animation-delay:760ms] sm:mt-8">
-          Point your camera at a chart or pick a live market. Stravifx reads the
+          Point your camera at a chart or pick a live market. StraviFX reads the
           structure, makes a call and lays out the trade: entry, stop, targets
           and position size.
         </p>

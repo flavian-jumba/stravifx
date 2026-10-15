@@ -23,7 +23,7 @@ export function FinalCta() {
         <div className="relative mx-auto w-fit">
           <Image
             src="/brand/stravifx-logo.png"
-            alt="Stravifx"
+            alt="StraviFX"
             width={480}
             height={189}
             className="h-auto w-[220px] sm:w-[280px]"

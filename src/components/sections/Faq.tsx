@@ -1,10 +1,10 @@
 import { Plus } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
-const QUESTIONS = [
+export const QUESTIONS = [
   {
     q: "Do I need a screenshot of a chart?",
-    a: "No. You can photograph your screen or upload a screenshot, but Quick analysis also works without either: pick a market and a timeframe and Stravifx pulls live candles and builds the setup from the data.",
+    a: "No. You can photograph your screen or upload a screenshot, but Quick analysis also works without either: pick a market and a timeframe and StraviFX pulls live candles and builds the setup from the data.",
   },
   {
     q: "Which markets and timeframes does it cover?",
@@ -15,12 +15,12 @@ const QUESTIONS = [
     a: "It reflects how much evidence the analysis found for its read of the chart. It is not the probability that a trade will be profitable.",
   },
   {
-    q: "Does Stravifx place trades for me?",
-    a: "No. Stravifx analyses a chart and lays out a plan. Whether to act on it, and where to place the trade, is your decision.",
+    q: "Does StraviFX place trades for me?",
+    a: "No. StraviFX analyses a chart and lays out a plan. Whether to act on it, and where to place the trade, is your decision.",
   },
   {
     q: "Is this financial advice?",
-    a: "No. Stravifx provides AI-generated analysis for information and education. It does not know your circumstances and it can be wrong. Trading carries a high risk of loss.",
+    a: "No. StraviFX provides AI-generated analysis for information and education. It does not know your circumstances and it can be wrong. Trading carries a high risk of loss.",
   },
 ];
 

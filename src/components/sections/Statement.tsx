@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 const LINES = [
   "The market never stops talking.",
   "Pairs, timeframes, indicators, headlines. By the time you’ve drawn your lines, price has already moved.",
-  "Stravifx turns the chart in front of you into a plan you can act on, or walk away from.",
+  "StraviFX turns the chart in front of you into a plan you can act on, or walk away from.",
 ];
 
 const WORDS = LINES.flatMap((line, lineIndex) =>

@@ -25,25 +25,25 @@ const departure = localFont({
   display: "swap",
 });
 
-const title = `${SITE.name} — ${SITE.tagline}`;
-
+/**
+ * Defaults for every route. The homepage sets its own canonical and social
+ * card in page.tsx; inner pages only need a title and a canonical.
+ */
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
-  title,
+  title: {
+    default: SITE.seoTitle,
+    template: `%s · ${SITE.name}`,
+  },
   description: SITE.description,
   applicationName: SITE.name,
-  alternates: { canonical: "/" },
   openGraph: {
-    title,
-    description: SITE.description,
-    url: "/",
     siteName: SITE.name,
     type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title,
-    description: SITE.description,
   },
 };
 

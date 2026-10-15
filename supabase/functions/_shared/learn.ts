@@ -1,5 +1,5 @@
 /**
- * Stravifx Learn — paid waitlist, server side.
+ * StraviFX Learn — paid waitlist, server side.
  *
  * Runs as Supabase Edge Functions. Everything here uses only web-standard APIs
  * (fetch, Request/Response, Web Crypto), so the same code is exercised by the
@@ -370,7 +370,7 @@ export async function handleCheckout(
             reference,
             callback_url: `${returnOrigin(request, c)}/learn/welcome`,
             metadata: {
-              product: "Stravifx Learn waitlist",
+              product: "StraviFX Learn waitlist",
               custom_fields: [
                 {
                   display_name: "Name",

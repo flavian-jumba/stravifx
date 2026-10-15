@@ -1,0 +1,24 @@
+# StraviFX
+
+> StraviFX is an AI chart analysis app for Android. Point your camera at any forex, gold, stock or crypto chart (or pick a live market and timeframe) and it reads the market structure, makes a buy, sell or stand-aside call with a confidence score, and lays out the trade: entry, stop loss, two take-profit targets and a position size. Every setup is saved to a journal and tracked to its outcome. StraviFX is built by Infinytech Solutions in Nairobi, Kenya. It is sometimes written "Stravifx". It is not related to Strava or StriveFX.
+
+StraviFX provides analysis for information and education only. It is not financial advice, it does not place trades, and its confidence score is not a probability of profit.
+
+## Key pages
+
+- [Home](https://www.stravifx.app/): what StraviFX does, how it works in six steps, features, markets covered and FAQ
+- [Get the app on Google Play](https://play.google.com/store/apps/details?id=com.flavian.fxp): Android app, package com.flavian.fxp
+- [Privacy policy](https://www.stravifx.app/privacy)
+- [Terms of use](https://www.stravifx.app/terms)
+- [Risk disclaimer](https://www.stravifx.app/disclaimer)
+- [Delete your account](https://www.stravifx.app/delete-account)
+
+## Facts
+
+- Platforms: Android (Google Play)
+- Markets: forex, stocks, crypto and gold; timeframes from 5 minutes to 1 week
+- Hourly checks: EUR/USD, GBP/USD, USD/JPY, XAU/USD, GBP/JPY, AUD/USD
+- Inputs: a photo of a screen, a screenshot, or a live market with no chart needed
+- Outputs: trend and structure in plain English, a call with confidence, an execution ladder (entry, stop, TP1, TP2 with pips and reward-to-risk), lot size from account equity and risk percentage, and a journal of outcomes
+- Pricing: free to download, with optional subscriptions
+- Support: stravifxapp@gmail.com

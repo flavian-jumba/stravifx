@@ -22,7 +22,7 @@ const STEPS: Step[] = [
   {
     label: "Scan",
     title: "Show it any chart.",
-    body: "Take a photo of your screen, upload a screenshot, or skip the chart entirely: choose a market and a timeframe and Stravifx pulls live candles.",
+    body: "Take a photo of your screen, upload a screenshot, or skip the chart entirely: choose a market and a timeframe and StraviFX pulls live candles.",
     screen: "scan",
     spot: "top-0 h-full opacity-0",
   },
@@ -66,22 +66,22 @@ const STEPS: Step[] = [
 const SCREENS: Record<ScreenKey, { src: string; alt: string; fit: string }> = {
   scan: {
     src: "/screens/scan.webp",
-    alt: "Stravifx camera viewfinder framing a candlestick chart on a monitor",
+    alt: "StraviFX camera viewfinder framing a candlestick chart on a monitor",
     fit: "object-contain object-bottom",
   },
   result: {
     src: "/screens/result.webp",
-    alt: "Stravifx analysis of EUR/USD on the 1H timeframe with a Buy verdict at 75% confidence",
+    alt: "StraviFX analysis of EUR/USD on the 1H timeframe with a Buy verdict at 75% confidence",
     fit: "object-cover object-top",
   },
   plan: {
     src: "/screens/plan.webp",
-    alt: "Stravifx execution ladder with two targets, entry and stop, above the position calculator",
+    alt: "StraviFX execution ladder with two targets, entry and stop, above the position calculator",
     fit: "object-cover object-top",
   },
   journal: {
     src: "/screens/journal.webp",
-    alt: "Stravifx trade journal listing saved setups with target-hit and stop-hit outcomes",
+    alt: "StraviFX trade journal listing saved setups with target-hit and stop-hit outcomes",
     fit: "object-cover object-top",
   },
 };

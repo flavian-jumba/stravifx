@@ -1,6 +1,6 @@
-# Stravifx — landing page
+# StraviFX — landing page
 
-The marketing site for Stravifx, an Android app that reads a chart and lays out a trade plan.
+The marketing site for StraviFX, an Android app that reads a chart and lays out a trade plan.
 One page, built on Next.js 16 + React 19 + Tailwind v4.
 
 ## Run it
@@ -15,7 +15,7 @@ npm run check      # lint + typecheck + production build
 
 Everything site-wide lives in [`src/lib/site.ts`](src/lib/site.ts):
 
-- `playStoreUrl` — currently a Play Store **search** for "Stravifx". Replace it with the real
+- `playStoreUrl` — currently a Play Store **search** for "StraviFX". Replace it with the real
   listing URL.
 - `url` — the canonical origin used for metadata and social cards (`https://www.stravifx.app`).
 
@@ -38,7 +38,7 @@ amount matches what was quoted. The return page and the webhook share that one c
 **To open checkout** (the site shows "Checkout opens soon" until this is done):
 
 ```bash
-npx supabase login                      # the account that owns the Stravifx project
+npx supabase login                      # the account that owns the StraviFX project
 npx supabase link --project-ref <ref>   # the ref is the subdomain of NEXT_PUBLIC_SUPABASE_URL
 npx supabase db push                    # creates the learn_waitlist table
 npx supabase functions deploy           # learn-checkout, learn-confirm, paystack-webhook
@@ -90,7 +90,7 @@ public/
 
 - **Two modes, as in the film.** Ink (black) is the default; one paper section carries the
   principles and FAQ.
-- **One accent.** Stravifx gold. Green, red and cyan appear only inside app data.
+- **One accent.** StraviFX gold. Green, red and cyan appear only inside app data.
 - **Type.** Figtree for speech, Departure Mono (pixel) for numbers, IBM Plex Mono for labels.
 - **Real numbers.** The feature tiles are vector rebuilds of app UI using the EUR/USD 1H setup
   from the screenshots. No win-rate or performance claims anywhere.

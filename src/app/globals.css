@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 /* ===========================================================================
-   Stravifx — design foundation
+   StraviFX — design foundation
    Ink (black) is the default world; paper is the counter-mode, as in the film.
-   One accent: Stravifx gold. Green / red / cyan appear only inside app data.
+   One accent: StraviFX gold. Green / red / cyan appear only inside app data.
    =========================================================================== */
 
 @theme inline {
