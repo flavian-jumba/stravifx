@@ -64,8 +64,14 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 - [ ] Per-page Open Graph images for tools and guides
 - [ ] Internal-link audit: every page reachable from the homepage within 2 clicks, no orphans, descriptive anchor text
 
+### Phase 6: from research (added automatically by the daily research step)
+On-site, low-risk ideas the research step found evidence for. Each item names its source in `docs/seo/research.md`. They run after Phases 1–5 unless the owner moves them up.
+
 ### When the backlog is empty
 Pick the weakest page (thinnest content or worst PageSpeed) and improve it, or propose new items in the log for the owner to approve.
+
+## Research proposals: owner decides (the task must not do these)
+Ideas from research that involve money, accounts, outreach, off-site posting, the app, Play Console, or anything with policy risk. To approve one, move it into the Backlog (or do it yourself) and tick it here.
 
 ## Blocked: needs the owner (the task must not do these)
 - [ ] Send the Play app-signing SHA-256 (Play Console → Setup → App signing) for `/.well-known/assetlinks.json`
