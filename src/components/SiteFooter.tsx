@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LEGAL_LINKS, NAV_LINKS, SITE } from "@/lib/site";
+import { LEGAL_LINKS, NAV_LINKS, RESOURCE_LINKS, SITE } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -40,6 +40,29 @@ export function SiteFooter() {
             </ul>
           </nav>
         </div>
+
+        {RESOURCE_LINKS.length > 0 ? (
+          <nav aria-labelledby="footer-resources" className="mt-10">
+            <p
+              id="footer-resources"
+              className="font-mono text-[0.6875rem] uppercase tracking-[0.28em] text-fg-3"
+            >
+              Resources
+            </p>
+            <ul className="mt-2 flex flex-wrap gap-x-7">
+              {RESOURCE_LINKS.map((link) => (
+                <li key={link.href}>
+                  <a
+                    href={link.href}
+                    className="block py-2 text-sm text-fg-2 transition-colors duration-300 hover:text-fg"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        ) : null}
 
         <div className="mt-10 border-t border-white/10 pt-8 text-xs leading-[1.7] text-fg-3">
           <nav aria-label="Legal" className="mb-6">

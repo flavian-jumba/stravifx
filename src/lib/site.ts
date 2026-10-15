@@ -61,3 +61,12 @@ export const LEGAL_LINKS = [
   { label: "Risk disclaimer", href: "/disclaimer" },
   { label: "Delete your account", href: "/delete-account" },
 ] as const;
+
+/**
+ * The footer's Resources column. Only list pages that are live: add Tools,
+ * Glossary and the Learn guides here as each hub ships, never before.
+ */
+export const RESOURCE_LINKS: ReadonlyArray<{ label: string; href: string }> = [
+  { label: "Learn to trade", href: "/#learn" },
+  { label: "Trading FAQ", href: "/#faq" },
+];
