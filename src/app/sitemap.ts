@@ -1,22 +1,27 @@
 import type { MetadataRoute } from "next";
-import { LEGAL_LINKS, SITE } from "@/lib/site";
+import { SITE } from "@/lib/site";
 
-/** Every indexable page. Add new routes here as they ship. */
+/**
+ * Every indexable page, with the date its content last changed in a way a
+ * reader would notice (new section, rewritten copy, corrected facts).
+ *
+ * Bump `updated` only for such changes, never for restyles, refactors or
+ * redeploys. Google stops trusting a sitemap's dates if they move without
+ * real changes, and then ignores them even when a page does change.
+ *
+ * Google ignores `changefreq` and `priority`, so they are left out.
+ */
+const PAGES: ReadonlyArray<{ path: string; updated: string }> = [
+  { path: "/", updated: "2026-10-15" },
+  { path: "/privacy", updated: "2026-10-15" },
+  { path: "/terms", updated: "2026-10-15" },
+  { path: "/disclaimer", updated: "2026-10-15" },
+  { path: "/delete-account", updated: "2026-10-15" },
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
-  return [
-    {
-      url: SITE.url,
-      lastModified,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    ...LEGAL_LINKS.map((link) => ({
-      url: `${SITE.url}${link.href}`,
-      lastModified,
-      changeFrequency: "yearly" as const,
-      priority: 0.3,
-    })),
-  ];
+  return PAGES.map(({ path, updated }) => ({
+    url: path === "/" ? SITE.url : `${SITE.url}${path}`,
+    lastModified: updated,
+  }));
 }
