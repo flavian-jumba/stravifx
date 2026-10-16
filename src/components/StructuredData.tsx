@@ -93,7 +93,8 @@ const graph = {
         "How StraviFX turns any chart into a trade plan: scan, read the structure, make the call, plan every level, size the risk and keep score.",
       thumbnailUrl: `${SITE.url}${SITE.film.poster}`,
       contentUrl: `${SITE.url}${SITE.film.src}`,
-      uploadDate: "2026-10-10",
+      // Google wants a full ISO 8601 datetime with a timezone, not a bare date.
+      uploadDate: "2026-10-10T00:00:00+03:00",
       duration: "PT35S",
       publisher: { "@id": ORG_ID },
     },
