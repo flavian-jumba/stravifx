@@ -21,6 +21,8 @@ Replace bullets that newer evidence contradicts instead of stacking them.
 - AI Overviews and AI Mode need no special schema, AI text files or markup; what matters is crawlable, helpful pages and structured data that matches visible text. Treat `llms.txt` as a cheap extra, never a priority. ([AI features and your website](https://developers.google.com/search/docs/appearance/ai-features), updated 2025-12-10)
 - The SoftwareApplication/MobileApplication rich result requires `aggregateRating` or `review`. StraviFX has no first-party ratings to mark up, so the app schema stays rating-free (no rich result) until genuine on-site reviews exist; never borrow Play Store ratings. ([Software app docs](https://developers.google.com/search/docs/appearance/structured-data/software-app), updated 2026-09-08; [review snippet guidelines on fake/incentivised reviews](https://developers.google.com/search/updates), 2026-07-24)
 
+- Every date in structured data (`uploadDate`, `datePublished`, `dateModified`…) must be a full ISO 8601 datetime with a timezone, e.g. `2026-10-16T00:00:00+03:00` (Nairobi), never a bare `2026-10-16`. Search Console flagged the homepage VideoObject for exactly this. ([Video structured data](https://developers.google.com/search/docs/appearance/structured-data/video); Search Console Videos report, 2026-10-16)
+
 ## Research rotation
 
 | Day | Theme |
