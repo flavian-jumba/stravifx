@@ -11,6 +11,10 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 <!-- END:nextjs-agent-rules -->
 
+# StraviFX marketing context
+
+This repo is the StraviFX website (www.stravifx.app). Before writing any marketing copy, page content, metadata, Play listing text or ads, read `.agents/product-marketing.md`: product facts, plans, audience, competitors, brand voice and compliance rules. SEO work also follows `docs/seo/plan.md` and the Playbook in `docs/seo/research.md`.
+
 # Website Reverse-Engineer Template
 
 ## What This Is
