@@ -1,6 +1,6 @@
 # Product Marketing Context: StraviFX
 
-**Document version:** 1.1 · **Last updated:** 2026-10-16
+**Document version:** 1.2 · **Last updated:** 2026-10-16
 **Read this first.** Every marketing task (SEO pages, Play listing copy, ads, emails, directory listings, social posts) starts from this file, so it doesn't re-guess the product. Facts here are checked against the app and site code. Anything unconfirmed is marked **TBD (owner)**.
 
 > This repo is public. Keep private numbers (revenue, conversion rates, user counts) out of this file; record them privately and add only what is safe to publish.
@@ -96,6 +96,7 @@ Words users use: *analysis, signals, chart, levels, upgrade.* Words we prefer in
 ## 9. Brand voice
 
 - **Calm, precise, honest. "Straight with you."** No hype, no "🚀", no "guaranteed", "100% accurate", "get rich" or "never lose".
+- **No pressure tactics:** no fake urgency or scarcity, no countdown timers unless an offer really ends then, no guilt-trip copy ("No thanks, I like losing money"), no hidden or delayed close buttons on the paywall. Urgency is allowed only when it is true.
 - Short declarative sentences ending with a period. Sentence case. The payoff word goes last.
 - Principles used on the site: *Rules, not predictions. · Confidence is not a promise. · Losses stay on the record.*
 - Visuals: black ink (#000/#0A0A0B), off-white text (#F5F5F7), one gold accent (#F6BA18); fonts Figtree, IBM Plex Mono, Departure Mono (numerals). Green/red only inside app data.
@@ -133,5 +134,6 @@ None running (as of 2026-10-16).
 
 ## Changelog
 
+- **1.2 (2026-10-16):** brand voice: no pressure tactics (added when installing the paywall and onboarding skills).
 - **1.1 (2026-10-16):** review-prompt learning updated after the app fix.
 - **1.0 (2026-10-16):** first version, drafted from the app code, website, Play listing and reviews.
