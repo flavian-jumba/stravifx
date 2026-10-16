@@ -17,6 +17,7 @@ const PAGES: ReadonlyArray<{ path: string; updated: string }> = [
   { path: "/terms", updated: "2026-10-15" },
   { path: "/disclaimer", updated: "2026-10-15" },
   { path: "/delete-account", updated: "2026-10-15" },
+  { path: "/tools/lot-size-calculator", updated: "2026-10-16" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

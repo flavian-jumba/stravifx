@@ -67,6 +67,7 @@ export const LEGAL_LINKS = [
  * Glossary and the Learn guides here as each hub ships, never before.
  */
 export const RESOURCE_LINKS: ReadonlyArray<{ label: string; href: string }> = [
+  { label: "Lot size calculator", href: "/tools/lot-size-calculator" },
   { label: "Learn to trade", href: "/#learn" },
   { label: "Trading FAQ", href: "/#faq" },
 ];

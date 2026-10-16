@@ -13,6 +13,10 @@ StraviFX provides analysis for information and education only. It is not financi
 - [Risk disclaimer](https://www.stravifx.app/disclaimer)
 - [Delete your account](https://www.stravifx.app/delete-account)
 
+## Tools
+
+- [Lot size calculator](https://www.stravifx.app/tools/lot-size-calculator): position size in lots and units from balance, risk % and stop loss in pips, for USD-quoted pairs, USD/JPY and JPY crosses, USD/CAD, USD/CHF and gold (XAU/USD), with the formula and worked examples
+
 ## Facts
 
 - Platforms: Android (Google Play)
