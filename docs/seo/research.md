@@ -35,6 +35,14 @@ Replace bullets that newer evidence contradicts instead of stacking them.
 | Saturday | Links and digital PR: directories, communities, Kenya/Africa fintech press, partnerships |
 | Sunday | Content and keyword opportunities: question keywords, People Also Ask, topic gaps |
 
+## Open research questions
+
+Answer these first when the day's theme fits (move each into the log once answered).
+
+- **Q1 (Tuesday, AI search):** Vendor research cited in the `ai-seo` skill claims ChatGPT cut citations of listicles by about 50% and of comparison pages by about 32% in August 2026, and that self-published "best X" lists often get the publisher's competitors recommended instead. Is this confirmed by independent or primary sources? Decides the Phase 4 "Best AI chart analysis apps" item. (Added 2026-10-16)
+- **Q2 (Thursday, Play ASO):** Does Google Play index review text and developer replies for search? The `android-aso` skill says yes; no source was given. (Added 2026-10-16)
+- **Q3 (Friday, technical):** Do non-Google AI engines (ChatGPT search, Perplexity, Copilot) use FAQPage or other schema when choosing what to cite, now that Google has dropped FAQ rich results? (Added 2026-10-16)
+
 ## Research log (newest first)
 
 <!-- Entry format:

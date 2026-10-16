@@ -55,7 +55,7 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 - [ ] `/markets` hub + `/markets/xauusd`: evergreen guide to trading gold (sessions, what moves it, typical pip value, how StraviFX reads it). No live prices or calls unless real data is wired in
 - [ ] `/markets/eurusd` and `/markets/gbpusd`
 - [ ] `/markets/usdjpy`, `/markets/gbpjpy` and `/markets/audusd`
-- [ ] "Best AI chart analysis apps for Android": honest, researched, cites sources, names competitors' strengths
+- [ ] "Best AI chart analysis apps for Android": honest, researched, cites sources, names competitors' strengths. **Before building:** answer open research question Q1 in `docs/seo/research.md` (are self-published "best apps" lists being demoted by AI search?). If the evidence says they backfire, replace this item with a neutral buyer's guide ("How to choose an AI chart analysis app") instead
 - [ ] `/compare/chartai`: StraviFX vs ChartAI, factual and sourced
 
 ### Phase 5: technical polish
@@ -72,6 +72,32 @@ Pick the weakest page (thinnest content or worst PageSpeed) and improve it, or p
 
 ## Research proposals: owner decides (the task must not do these)
 Ideas from research that involve money, accounts, outreach, off-site posting, the app, Play Console, or anything with policy risk. To approve one, move it into the Backlog (or do it yourself) and tick it here.
+
+- [ ] **Monthly AI-visibility check** (from the `ai-seo` skill review, 2026-10-16). Once a month, ask each of these in ChatGPT, Perplexity and Google (AI Overview / AI Mode), 3 times each because answers vary between runs. Record per platform how often StraviFX or stravifx.app is mentioned (e.g. "2/3") and which sites are cited instead; add a line to `docs/seo/log.md`. Sites that keep getting cited are the targets for directories and PR.
+  1. best AI chart analysis app for Android
+  2. app that analyses a trading chart from a screenshot
+  3. AI forex chart analysis app
+  4. how to calculate lot size for gold
+  5. forex lot size calculator
+  6. what is a break of structure in trading
+  7. best forex app for beginners in Kenya
+  8. ChartAI alternative for Android
+  9. what is StraviFX
+  10. is StraviFX legit
+- [ ] **Directory and launch plan** (from the `directory-submissions` skill review, 2026-10-16). Start only after `/tools`, the glossary hub and at least one comparison page are live, so the links land on useful pages.
+  - Week 1: Crunchbase, LinkedIn company page, AlternativeTo (as an alternative to ChartAI / TradingView-style tools), SaaSHub
+  - Week 2: AI-tool directories: There's An AI For That, Futurepedia, Toolify, Future Tools
+  - Week 3–4: Product Hunt launch (prepare ~3 weeks ahead: screenshots, the 35-second film, a founder story; ask for feedback, never for upvotes)
+  - Write a different description for each directory (outcome-led for startup sites, "AI-first" for AI directories, "alternative to X" for AlternativeTo); never paste the same text everywhere
+  - Never pay submission services; skip directories with no real traffic or that demand a badge swap. Wikidata only once independent sources (press) exist, since it has notability rules
+  - Add each live profile URL to `SITE.sameAs` in `src/lib/site.ts`
+- [ ] **Play listing improvements** (from the `android-aso` skill review, 2026-10-16)
+  - Run Store Listing Experiments one element at a time (short description first, then the first screenshot, then the icon), at least 7 days each
+  - Keep "AI chart analysis" and "forex" inside the first 167 characters of the full description (the part shown before "more")
+  - Translate the listing (French for Francophone Africa, Portuguese (Brazil), Spanish (Latin America)); each language is a separate search index. Translate properly, not just machine output
+  - Reply to every 1–3 star review; when you fix the problem, reply again with "Fixed in version X.X"
+  - Remove the "Contains ads" label if the app shows no ads (the app code has no ads SDK)
+- [ ] **Let subscribers switch plans** (from review mining, 2026-10-16). A Play review asks to move between subscriptions without waiting for renewal. Google Play Billing and RevenueCat both support upgrades and downgrades; enable it in the app's paywall
 
 ## Blocked: needs the owner (the task must not do these)
 - [ ] Send the Play app-signing SHA-256 (Play Console → Setup → App signing) for `/.well-known/assetlinks.json`
