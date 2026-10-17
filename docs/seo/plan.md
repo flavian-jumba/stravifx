@@ -99,6 +99,8 @@ Ideas from research that involve money, accounts, outreach, off-site posting, th
   - Remove the "Contains ads" label if the app shows no ads (the app code has no ads SDK)
 - [ ] **Let subscribers switch plans** (from review mining, 2026-10-16). A Play review asks to move between subscriptions without waiting for renewal. Google Play Billing and RevenueCat both support upgrades and downgrades; enable it in the app's paywall
 
+- [ ] **Embeddable calculators** (from research 2026-10-17). Offer the lot size and pip calculators as an iframe embed for trading blogs, forums and Telegram/WhatsApp community sites. Rules if approved: the credit link reads "StraviFX" (never "best forex calculator"-type anchors), carries `rel="nofollow"`, and is visible; no hidden links; no requirement to link back. Value is referral traffic and brand awareness, not PageRank, because Google lists keyword-rich widget links as link spam. Needs owner approval because it distributes our code onto other sites and needs outreach to get used.
+
 ## Blocked: needs the owner (the task must not do these)
 - [ ] Send the Play app-signing SHA-256 (Play Console → Setup → App signing) for `/.well-known/assetlinks.json`
 - [ ] Track-record page: needs real, aggregated outcome data from the app's journal
