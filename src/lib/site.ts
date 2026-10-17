@@ -28,6 +28,12 @@ export const SITE = {
     width: 960,
     height: 197,
   },
+  /**
+   * The gold "FX" on a black square. Used where a square mark is needed: the
+   * app manifest and the Organization schema logo, which Google shows on white,
+   * where the white wordmark would disappear.
+   */
+  icon512: "/brand/icon-512.png",
   film: {
     src: "/film/stravifx-film.mp4",
     poster: "/film/poster.jpg",

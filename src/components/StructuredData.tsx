@@ -23,9 +23,11 @@ const graph = {
       url: SITE.url,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE.url}${SITE.logo.src}`,
-        width: SITE.logo.width,
-        height: SITE.logo.height,
+        // The square icon, not the wordmark: Google shows this logo on white,
+        // where the white "Stravi" lettering would vanish.
+        url: `${SITE.url}${SITE.icon512}`,
+        width: 512,
+        height: 512,
       },
       description: SITE.description,
       address: {

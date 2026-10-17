@@ -10,7 +10,10 @@ export default function manifest(): MetadataRoute.Manifest {
     display: "standalone",
     background_color: "#000000",
     theme_color: "#000000",
-    icons: [{ src: "/icon.svg", sizes: "any", type: "image/svg+xml" }],
+    icons: [
+      { src: "/icon.png", sizes: "192x192", type: "image/png" },
+      { src: SITE.icon512, sizes: "512x512", type: "image/png" },
+    ],
     // Points Android to the real app instead of offering to install the site.
     related_applications: [
       { platform: "play", id: SITE.playPackageId, url: SITE.playListingUrl },
