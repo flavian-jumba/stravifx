@@ -16,6 +16,7 @@ StraviFX provides analysis for information and education only. It is not financi
 ## Tools
 
 - [Lot size calculator](https://www.stravifx.app/tools/lot-size-calculator): position size in lots and units from balance, risk % and stop loss in pips, for USD-quoted pairs, USD/JPY and JPY crosses, USD/CAD, USD/CHF and gold (XAU/USD), with the formula and worked examples
+- [Pip calculator](https://www.stravifx.app/tools/pip-calculator): pip value per standard, mini and micro lot for majors, JPY pairs, crosses and gold (XAU/USD), in a USD, EUR or GBP account, with the formula and worked examples
 
 ## Facts
 

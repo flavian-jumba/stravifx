@@ -103,6 +103,11 @@ export default function LotSizeCalculatorPage() {
           Units are the lots times the contract size: 0.20 lots of EUR/USD is
           20,000 euros, and 0.10 lots of gold is 10 ounces.
         </p>
+        <p>
+          For any other pair or a euro or pound account, the{" "}
+          <a href="/tools/pip-calculator">pip calculator</a> works out the pip
+          value per lot.
+        </p>
       </ContentSection>
 
       <ContentSection id="examples" title="Worked examples">

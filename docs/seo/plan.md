@@ -22,7 +22,7 @@ cited by AI search, without breaking Google's spam policies.
 ### Phase 1: free tools (highest search demand, most linkable)
 - [x] Shared `ContentPage` layout for non-legal pages (breadcrumbs, risk note, "Get the app" CTA, BreadcrumbList JSON-LD) + a "Resources" column in the footer linking Tools, Glossary and Learn (shipped 2026-10-15)
 - [x] `/tools/lot-size-calculator`: forex, gold (XAU/USD) and JPY pairs; inputs: balance, risk %, stop in pips, pair; output: lots, units, money at risk. Explain the formula, worked example, FAQ (FAQPage JSON-LD), link to the app (shipped 2026-10-16)
-- [ ] `/tools/pip-calculator`: pip value per standard/mini/micro lot for majors, JPY pairs and gold, any account currency the page supports
+- [x] `/tools/pip-calculator`: pip value per standard/mini/micro lot for majors, JPY pairs and gold, any account currency the page supports (shipped 2026-10-17)
 - [ ] `/tools/risk-reward-calculator`: entry, stop, target → R:R, break-even win rate
 - [ ] `/tools` hub page listing every tool
 
