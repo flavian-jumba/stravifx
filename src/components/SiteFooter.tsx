@@ -8,11 +8,11 @@ export function SiteFooter() {
         <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
           <a href="/#top" aria-label="StraviFX home">
             <Image
-              src="/brand/stravifx-logo.png"
+              src={SITE.logo.src}
               alt="StraviFX"
-              width={480}
-              height={189}
-              className="h-9 w-auto"
+              width={SITE.logo.width}
+              height={SITE.logo.height}
+              className="h-7 w-auto"
             />
           </a>
           <nav aria-label="Footer">

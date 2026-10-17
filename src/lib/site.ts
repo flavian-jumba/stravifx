@@ -22,6 +22,12 @@ export const SITE = {
    * under acquisition, so website installs can be told apart from Play search.
    */
   playStoreUrl: `${PLAY_LISTING_URL}&referrer=utm_source%3Dwebsite%26utm_medium%3Dcta`,
+  /** The wordmark (white "Stravi", gold "FX"), cropped to the letters. */
+  logo: {
+    src: "/brand/stravifx-wordmark.png",
+    width: 960,
+    height: 197,
+  },
   film: {
     src: "/film/stravifx-film.mp4",
     poster: "/film/poster.jpg",

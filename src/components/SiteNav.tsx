@@ -33,12 +33,12 @@ export function SiteNav() {
       >
         <a href="/#top" aria-label="StraviFX home" className="shrink-0 py-1.5">
           <Image
-            src="/brand/stravifx-logo.png"
+            src={SITE.logo.src}
             alt="StraviFX"
-            width={480}
-            height={189}
+            width={SITE.logo.width}
+            height={SITE.logo.height}
             priority
-            className="h-8 w-auto"
+            className="h-6 w-auto"
           />
         </a>
 

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { SITE } from "@/lib/site";
 import { CandleField } from "@/components/CandleField";
 import { Sparkle } from "@/components/icons";
 import { PlayBadge } from "@/components/PlayBadge";
@@ -22,10 +23,10 @@ export function FinalCta() {
       <Reveal className="relative mx-auto max-w-[980px]">
         <div className="relative mx-auto w-fit">
           <Image
-            src="/brand/stravifx-logo.png"
+            src={SITE.logo.src}
             alt="StraviFX"
-            width={480}
-            height={189}
+            width={SITE.logo.width}
+            height={SITE.logo.height}
             className="h-auto w-[220px] sm:w-[280px]"
           />
           <Sparkle className="absolute right-[4.5%] top-[4%] size-6 animate-twinkle text-[#fff6c8] drop-shadow-[0_0_14px_rgba(246,186,24,0.9)]" />

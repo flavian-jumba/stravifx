@@ -23,9 +23,9 @@ const graph = {
       url: SITE.url,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE.url}/brand/stravifx-logo.png`,
-        width: 480,
-        height: 189,
+        url: `${SITE.url}${SITE.logo.src}`,
+        width: SITE.logo.width,
+        height: SITE.logo.height,
       },
       description: SITE.description,
       address: {

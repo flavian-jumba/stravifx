@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { SITE } from "@/lib/site";
 import { Sparkle } from "@/components/icons";
 import { confirmLearnPayment, type LearnConfirmation } from "@/lib/learn-api";
 
@@ -67,12 +68,12 @@ export default async function LearnWelcomePage({ searchParams }: Props) {
       />
       <div className="relative w-full max-w-[640px]">
         <Image
-          src="/brand/stravifx-logo.png"
+          src={SITE.logo.src}
           alt="StraviFX"
-          width={480}
-          height={189}
+          width={SITE.logo.width}
+          height={SITE.logo.height}
           priority
-          className="mx-auto h-12 w-auto"
+          className="mx-auto h-10 w-auto"
         />
 
         <div className="mt-12 rounded-[32px] border border-white/[0.08] bg-ink-2 px-6 py-10 sm:px-12 sm:py-14">
