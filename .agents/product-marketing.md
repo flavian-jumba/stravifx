@@ -1,6 +1,6 @@
 # Product Marketing Context: StraviFX
 
-**Document version:** 1.2 · **Last updated:** 2026-10-16
+**Document version:** 1.3 · **Last updated:** 2026-10-16
 **Read this first.** Every marketing task (SEO pages, Play listing copy, ads, emails, directory listings, social posts) starts from this file, so it doesn't re-guess the product. Facts here are checked against the app and site code. Anything unconfirmed is marked **TBD (owner)**.
 
 > This repo is public. Keep private numbers (revenue, conversion rates, user counts) out of this file; record them privately and add only what is safe to publish.
@@ -130,10 +130,12 @@ None running (as of 2026-10-16).
 - (2026-10-15) Brand was invisible in search; results showed Strava, StriveFX and Stravix. Entity setup started (schema `sameAs`, consistent naming).
 - (2026-10-16) FAQ rich results are gone from Google; keep FAQPage schema only where a visible FAQ exists. See `docs/seo/research.md`.
 - (2026-10-16) The app asked for a review right after onboarding (too early); 14 reviews arrived on one day. Fixed in the app code: it now asks once, when the user closes their first successful (non-sample) analysis, with no question before it. Ships with the next app release.
+- (2026-10-17) First visibility milestone: Google's AI Overview for "stravifx" now describes StraviFX correctly (AI chart reader, trade planning with entry/stop/targets/position size, forex/gold/crypto), largely in our own site wording, and adds a note separating it from "Stravix" brands. The Play listing ranks directly below it with the new title. The site itself wasn't yet indexed in Search Console, so the Play listing and on-page text carry the brand for now.
 - Open questions **TBD (owner):** exact prices; the Play "Contains ads" label (the app code has no ads SDK, so it may be wrong); founder name for the About page.
 
 ## Changelog
 
+- **1.3 (2026-10-17):** learning: first AI Overview for the brand.
 - **1.2 (2026-10-16):** brand voice: no pressure tactics (added when installing the paywall and onboarding skills).
 - **1.1 (2026-10-16):** review-prompt learning updated after the app fix.
 - **1.0 (2026-10-16):** first version, drafted from the app code, website, Play listing and reviews.
