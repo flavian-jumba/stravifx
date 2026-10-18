@@ -66,6 +66,7 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 
 ### Phase 6: from research (added automatically by the daily research step)
 On-site, low-risk ideas the research step found evidence for. Each item names its source in `docs/seo/research.md`. They run after Phases 1–5 unless the owner moves them up.
+- [ ] `ContentPage`: add a visible "Published by Infinytech Solutions, Nairobi · Last updated <date>" line under the H1 on tools, glossary and guide pages, the date taken from the same `PAGES` entry in `src/app/sitemap.ts` (one source of truth, so it stays truthful), linking to /disclaimer until an About page exists. Must not change any title, H1, canonical or URL. Why: Google's helpful content self-assessment asks whether it's clear who made the content and whether it is easily verified, and finance is YMYL (research log 2026-10-18)
 
 ### When the backlog is empty
 Pick the weakest page (thinnest content or worst PageSpeed) and improve it, or propose new items in the log for the owner to approve.

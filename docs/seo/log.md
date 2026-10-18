@@ -2,6 +2,15 @@
 
 Newest entry first. One entry per daily run.
 
+## 2026-10-18
+
+- Shipped: risk reward calculator (buy or sell; most forex pairs, JPY pairs and gold; entry, stop, target and optional spread + commission in pips → R:R, risk and reward in pips, break-even win rate, average result per trade in R at 30–60% win rates; formulas, 4 worked examples, 5-question FAQ with FAQPage JSON-LD, BreadcrumbList, risk note, Get StraviFX CTA) → https://www.stravifx.app/tools/risk-reward-calculator . Added to sitemap (updated 2026-10-18), footer `RESOURCE_LINKS` and `llms.txt` Tools. Live on the 3rd poll (~30 s after push)
+- Health: 15/15 URLs 200 (8 fixed paths + 7 sitemap URLs, before the ship); after the ship the homepage is 200 and the sitemap lists the new URL. Title, canonical, JSON-LD (5 types parse) and Play links (`id=com.flavian.fxp`, 14 links) OK. PageSpeed mobile unavailable (API daily quota exceeded, 429)
+- Visibility (rough web search, not Google rank): "StraviFX" → not seen (Strava, StriveFX, StreamFX); "StraviFX app" → not seen (Strava, StravistiX); "pip calculator forex gold JPY account currency" → not seen (FXCM, Dukascopy, TradingView scripts)
+- Title changes: none
+- Research: Content and keyword opportunities: BOS/CHoCH results are mostly TradingView posts and broker blogs that disagree on definitions; Google's helpful content doc (updated 2026-10-05) now scores main content, tools included, on effort, originality, skill and accuracy; Playbook changed (+3 bullets, 1 confirmed); proposal added to Phase 6 (visible publisher + last-updated line)
+- Notes: Verified in the browser at 375px (one H1, no horizontal scroll, BreadcrumbList + FAQPage parse): EUR/USD buy 1.1000 / 1.0970 / 1.1060 → 1:2.00, 33.3%; with 1.5 pips of costs → 1:1.86, 35%; the Sell toggle mirrors the levels (1.1030 / 1.0940) → 1:2.00; gold 4000 / 3990 / 4030 → 1,000 / 3,000 pips, 1:3.00, 25%; a buy stop above the entry and costs above the reward both show plain error messages. Prices are labelled examples; no live data. The R:R page links to the lot size and pip calculators, but those two pages don't link back yet. The /tools hub (next item) will tie all three together. Next: `/tools` hub. When it ships, add the Tools crumb to the three calculators' breadcrumbs.
+
 ## 2026-10-17
 
 - Shipped: pip calculator (12 instruments: XXX/USD majors, USD/JPY and JPY crosses, USD/CAD, USD/CHF, EUR/GBP, XAU/USD; USD, EUR or GBP account; pip value per standard/mini/micro lot and a custom size; formula, 5 worked examples, FAQ with FAQPage JSON-LD, BreadcrumbList, risk note, Get StraviFX CTA) → https://www.stravifx.app/tools/pip-calculator . Added to sitemap (updated 2026-10-17), footer `RESOURCE_LINKS`, `llms.txt`, and linked from the lot size calculator's formula section. Live on the 3rd poll (~30 s after push)
