@@ -8,7 +8,7 @@ type PlayBadgeProps = {
   size?: "md" | "lg";
 };
 
-/** Google's official "Get it on Google Play" badge, unmodified. */
+/** Google's official "Get it on Google Play" badge, unmodified, with a gold shimmer tracing its border. */
 export function PlayBadge({ className, size = "md" }: PlayBadgeProps) {
   return (
     <a
@@ -17,7 +17,7 @@ export function PlayBadge({ className, size = "md" }: PlayBadgeProps) {
       rel="noopener noreferrer"
       aria-label="Get StraviFX on Google Play"
       className={cn(
-        "inline-block transition-transform duration-300 ease-out-expo hover:scale-[1.03] active:scale-[0.98]",
+        "relative isolate inline-block transition-transform duration-300 ease-out-expo hover:scale-[1.03] active:scale-[0.98]",
         className,
       )}
     >
@@ -27,6 +27,13 @@ export function PlayBadge({ className, size = "md" }: PlayBadgeProps) {
         width={646}
         height={250}
         className={cn("w-auto", size === "lg" ? "h-[88px]" : "h-[72px]")}
+      />
+      <span
+        aria-hidden="true"
+        className={cn(
+          "badge-shimmer",
+          size === "lg" ? "[--badge-radius:6.5px]" : "[--badge-radius:5.25px]",
+        )}
       />
     </a>
   );

@@ -91,6 +91,39 @@
   }
 }
 
+@property --shimmer-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes shimmer-spin {
+  to {
+    --shimmer-angle: 360deg;
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  40%,
+  100% {
+    scale: 1;
+    box-shadow: 0 0 0 0 rgb(246 186 24 / 0);
+  }
+  10% {
+    scale: 1.07;
+    box-shadow: 0 0 18px 2px rgb(246 186 24 / 0.55);
+  }
+  20% {
+    scale: 1;
+    box-shadow: 0 0 8px 0 rgb(246 186 24 / 0.25);
+  }
+  30% {
+    scale: 1.05;
+    box-shadow: 0 0 22px 4px rgb(246 186 24 / 0.6);
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -173,6 +206,54 @@
       rgb(255 255 255 / 0.14) 80%,
       transparent
     );
+  }
+
+  /* Play badge — a gold glint that travels round the badge's border.
+     The ring sits over the artwork's own 1px outline (41/646 x 41/250 inset),
+     so the badge itself stays unmodified. */
+  .badge-shimmer {
+    position: absolute;
+    inset: 16.4% 6.35%;
+    border-radius: var(--badge-radius, 5px);
+    pointer-events: none;
+  }
+
+  .badge-shimmer::before,
+  .badge-shimmer::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: conic-gradient(
+      from var(--shimmer-angle),
+      rgb(246 186 24 / 0.25) 0deg,
+      rgb(246 186 24 / 0.25) 250deg,
+      #ffe08a 310deg,
+      #fff6d6 330deg,
+      #f6ba18 350deg,
+      rgb(246 186 24 / 0.25) 360deg
+    );
+    animation: shimmer-spin 3.2s linear infinite;
+  }
+
+  /* Crisp ring */
+  .badge-shimmer::before {
+    padding: 1.5px;
+    mask:
+      linear-gradient(#000 0 0) content-box exclude,
+      linear-gradient(#000 0 0);
+  }
+
+  /* Soft halo that follows the glint */
+  .badge-shimmer::after {
+    z-index: -1;
+    filter: blur(8px);
+    opacity: 0.55;
+  }
+
+  /* "Get the app" — a calm lub-dub with a gold glow on each beat */
+  .cta-heartbeat {
+    animation: heartbeat 2.4s ease-in-out infinite;
   }
 
   .mask-fade-x {

@@ -60,7 +60,7 @@ export function SiteNav() {
             href={SITE.playStoreUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex h-10 items-center rounded-full bg-gold px-4 text-[0.8125rem] font-semibold text-black transition-colors duration-300 hover:bg-gold-soft active:scale-[0.97]"
+            className="cta-heartbeat flex h-10 items-center rounded-full bg-gold px-4 text-[0.8125rem] font-semibold text-black transition-colors duration-300 hover:bg-gold-soft active:scale-[0.97]"
           >
             Get the app
           </a>
