@@ -24,7 +24,7 @@ cited by AI search, without breaking Google's spam policies.
 - [x] `/tools/lot-size-calculator`: forex, gold (XAU/USD) and JPY pairs; inputs: balance, risk %, stop in pips, pair; output: lots, units, money at risk. Explain the formula, worked example, FAQ (FAQPage JSON-LD), link to the app (shipped 2026-10-16)
 - [x] `/tools/pip-calculator`: pip value per standard/mini/micro lot for majors, JPY pairs and gold, any account currency the page supports (shipped 2026-10-17)
 - [x] `/tools/risk-reward-calculator`: entry, stop, target → R:R, break-even win rate (shipped 2026-10-18)
-- [ ] `/tools` hub page listing every tool
+- [x] `/tools` hub page listing every tool (shipped 2026-10-19)
 
 ### Phase 2: glossary (definitions are what AI answers quote)
 Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossary.ts`. Expand each term into a page that starts with a 40–60-word direct answer, then an example, why it matters, common mistakes, related terms, and a link to the app. Three terms per run.

@@ -50,7 +50,10 @@ export default function LotSizeCalculatorPage() {
     <ContentPage
       eyebrow="Tool"
       title="Lot size calculator"
-      breadcrumbs={[{ name: "Lot size calculator", href: PATH }]}
+      breadcrumbs={[
+        { name: "Tools", href: "/tools" },
+        { name: "Lot size calculator", href: PATH },
+      ]}
       schema={[faqSchema]}
       wide
       answer={

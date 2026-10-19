@@ -50,7 +50,10 @@ export default function PipCalculatorPage() {
     <ContentPage
       eyebrow="Tool"
       title="Pip calculator"
-      breadcrumbs={[{ name: "Pip calculator", href: PATH }]}
+      breadcrumbs={[
+        { name: "Tools", href: "/tools" },
+        { name: "Pip calculator", href: PATH },
+      ]}
       schema={[faqSchema]}
       wide
       answer={

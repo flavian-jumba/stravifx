@@ -15,6 +15,8 @@ StraviFX provides analysis for information and education only. It is not financi
 
 ## Tools
 
+- [Trading calculators hub](https://www.stravifx.app/tools): the three free calculators below, which one to use first, one EUR/USD trade worked through all three, and the lot and pip conventions they share
+
 - [Lot size calculator](https://www.stravifx.app/tools/lot-size-calculator): position size in lots and units from balance, risk % and stop loss in pips, for USD-quoted pairs, USD/JPY and JPY crosses, USD/CAD, USD/CHF and gold (XAU/USD), with the formula and worked examples
 - [Pip calculator](https://www.stravifx.app/tools/pip-calculator): pip value per standard, mini and micro lot for majors, JPY pairs, crosses and gold (XAU/USD), in a USD, EUR or GBP account, with the formula and worked examples
 - [Risk reward calculator](https://www.stravifx.app/tools/risk-reward-calculator): risk-to-reward ratio and break-even win rate from entry, stop loss and take profit for forex pairs, JPY pairs and gold (XAU/USD), with optional spread and commission, the formulas and worked examples

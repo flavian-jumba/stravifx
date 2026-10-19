@@ -50,7 +50,10 @@ export default function RiskRewardCalculatorPage() {
     <ContentPage
       eyebrow="Tool"
       title="Risk reward calculator"
-      breadcrumbs={[{ name: "Risk reward calculator", href: PATH }]}
+      breadcrumbs={[
+        { name: "Tools", href: "/tools" },
+        { name: "Risk reward calculator", href: PATH },
+      ]}
       schema={[faqSchema]}
       wide
       answer={
