@@ -2,6 +2,15 @@
 
 Newest entry first. One entry per daily run.
 
+## 2026-10-19
+
+- Shipped: `/tools` hub (cards for the three calculators with the question each answers, inputs and outputs; which calculator to use first; one EUR/USD trade worked through all three: 1:2, 33.3% break-even, $10 a pip, 0.16 lots risking $48; shared lot and pip conventions; ItemList + BreadcrumbList JSON-LD, risk note, Get StraviFX CTA) → https://www.stravifx.app/tools . Added to sitemap (updated 2026-10-19), footer `RESOURCE_LINKS` ("All tools") and `llms.txt` Tools. The three calculators now have a Home → Tools → page breadcrumb (visible and BreadcrumbList); their titles, H1s, canonicals and sitemap dates are unchanged. Live on the 3rd poll (~30 s after push)
+- Health: 16/16 URLs 200 (8 fixed paths + 8 sitemap URLs, before the ship); after the ship the homepage is 200 and the sitemap lists /tools. Title, canonical, JSON-LD (Organization, WebSite, MobileApplication, VideoObject, FAQPage parse) and Play links (`id=com.flavian.fxp`, 14 links) OK. PageSpeed mobile unavailable (API daily quota exceeded, 429)
+- Visibility (rough web search, not Google rank): "StraviFX" → not seen (Strava, StriveFX, StreamFX); "StraviFX app" → not seen (Strava, StravistiX); "risk reward calculator forex break-even win rate" → not seen (TradingView scripts, VT Markets, Liberated Stock Trader)
+- Title changes: none
+- Research: Google Search: Google's 2026-10-01 generative AI guidance asks for a manual fact-check of AI-written content and its metadata before publishing; no ranking update is rolling out (September spam update ended ~10-08); Playbook changed (+1 bullet); proposal added under Research proposals (human fact-check and AI-assisted disclosure)
+- Notes: Verified at 375px before pushing (one H1, H2/H3 order logical, no horizontal scroll, canonical https://www.stravifx.app/tools). The hub's title is "Free Forex & Gold Trading Calculators · StraviFX" (48 characters). Next: `/glossary` hub + Market structure, BOS, CHoCH; apply the 2026-10-18 finding (name the close-vs-wick variants and state StraviFX's convention, which should be checked against the app's glossary).
+
 ## 2026-10-18
 
 - Shipped: risk reward calculator (buy or sell; most forex pairs, JPY pairs and gold; entry, stop, target and optional spread + commission in pips → R:R, risk and reward in pips, break-even win rate, average result per trade in R at 30–60% win rates; formulas, 4 worked examples, 5-question FAQ with FAQPage JSON-LD, BreadcrumbList, risk note, Get StraviFX CTA) → https://www.stravifx.app/tools/risk-reward-calculator . Added to sitemap (updated 2026-10-18), footer `RESOURCE_LINKS` and `llms.txt` Tools. Live on the 3rd poll (~30 s after push)
