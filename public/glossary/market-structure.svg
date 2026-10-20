@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Bullish market structure: each swing high is higher than the last (HH) and each swing low holds above the previous one (HL)</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">BULLISH STRUCTURE</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">Higher highs (HH) and higher lows (HL)</text>
+  <polyline points="40,350 150,220 220,290 330,170 400,240 510,120 580,190 680,100" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <g fill="#F6BA18">
+    <circle cx="150" cy="220" r="6"/><circle cx="220" cy="290" r="6"/>
+    <circle cx="330" cy="170" r="6"/><circle cx="400" cy="240" r="6"/>
+    <circle cx="510" cy="120" r="6"/><circle cx="580" cy="190" r="6"/>
+  </g>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="17" fill="#F5F5F7" text-anchor="middle">
+    <text x="150" y="204">H</text>
+    <text x="220" y="318">HL</text>
+    <text x="330" y="154">HH</text>
+    <text x="400" y="268">HL</text>
+    <text x="510" y="104">HH</text>
+    <text x="580" y="218">HL</text>
+  </g>
+  <line x1="220" y1="290" x2="560" y2="290" stroke="#6E6E73" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <line x1="400" y1="240" x2="560" y2="240" stroke="#6E6E73" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration, not real prices. Bearish structure is the mirror image: LH and LL.</text>
+</svg>

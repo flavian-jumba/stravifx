@@ -21,6 +21,13 @@ StraviFX provides analysis for information and education only. It is not financi
 - [Pip calculator](https://www.stravifx.app/tools/pip-calculator): pip value per standard, mini and micro lot for majors, JPY pairs, crosses and gold (XAU/USD), in a USD, EUR or GBP account, with the formula and worked examples
 - [Risk reward calculator](https://www.stravifx.app/tools/risk-reward-calculator): risk-to-reward ratio and break-even win rate from entry, stop loss and take profit for forex pairs, JPY pairs and gold (XAU/USD), with optional spread and commission, the formulas and worked examples
 
+## Glossary
+
+- [Trading glossary](https://www.stravifx.app/glossary): plain-English definitions of the terms the StraviFX app uses; where traders disagree, each page names the variants and states StraviFX's convention (a level counts as broken only on a candle close)
+- [Market structure](https://www.stravifx.app/glossary/market-structure): swing highs and lows; bullish (higher highs, higher lows), bearish (lower highs, lower lows) and range; how timeframes change the reading
+- [Break of Structure (BOS)](https://www.stravifx.app/glossary/break-of-structure): a close beyond the last swing high or low in the trend's direction; close vs wick conventions; BOS vs CHoCH
+- [Change of Character (CHoCH)](https://www.stravifx.app/glossary/change-of-character): the first close against the trend (below the last higher low, or above the last lower high); CHoCH vs BOS vs market structure shift (MSS)
+
 ## Facts
 
 - Platforms: Android (Google Play)

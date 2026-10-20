@@ -28,7 +28,7 @@ cited by AI search, without breaking Google's spam policies.
 
 ### Phase 2: glossary (definitions are what AI answers quote)
 Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossary.ts`. Expand each term into a page that starts with a 40–60-word direct answer, then an example, why it matters, common mistakes, related terms, and a link to the app. Three terms per run.
-- [ ] `/glossary` hub + Market structure, Break of Structure (BOS), Change of Character (CHoCH)
+- [x] `/glossary` hub + Market structure, Break of Structure (BOS), Change of Character (CHoCH) (shipped 2026-10-20)
 - [ ] Market Structure Shift (MSS), Swing high / swing low, Higher highs / higher lows
 - [ ] Range / consolidation, Retest, Liquidity
 - [ ] Liquidity sweep / stop hunt, Buy-side / sell-side liquidity, Equal highs / equal lows

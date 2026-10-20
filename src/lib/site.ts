@@ -83,6 +83,7 @@ export const RESOURCE_LINKS: ReadonlyArray<{ label: string; href: string }> = [
   { label: "Lot size calculator", href: "/tools/lot-size-calculator" },
   { label: "Pip calculator", href: "/tools/pip-calculator" },
   { label: "Risk reward calculator", href: "/tools/risk-reward-calculator" },
+  { label: "Trading glossary", href: "/glossary" },
   { label: "Learn to trade", href: "/#learn" },
   { label: "Trading FAQ", href: "/#faq" },
 ];

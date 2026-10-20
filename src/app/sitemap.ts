@@ -21,6 +21,10 @@ const PAGES: ReadonlyArray<{ path: string; updated: string }> = [
   { path: "/tools/lot-size-calculator", updated: "2026-10-16" },
   { path: "/tools/pip-calculator", updated: "2026-10-17" },
   { path: "/tools/risk-reward-calculator", updated: "2026-10-18" },
+  { path: "/glossary", updated: "2026-10-20" },
+  { path: "/glossary/market-structure", updated: "2026-10-20" },
+  { path: "/glossary/break-of-structure", updated: "2026-10-20" },
+  { path: "/glossary/change-of-character", updated: "2026-10-20" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

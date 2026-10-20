@@ -1,0 +1,70 @@
+import { SITE } from "@/lib/site";
+
+/**
+ * Glossary terms that have a live page. The definitions follow the StraviFX
+ * app's glossary (`src/config/glossary.ts` in the app repo), so the site and
+ * the app use the same words. Add a term here only when its page ships.
+ */
+export type GlossaryEntry = {
+  slug: string;
+  term: string;
+  /** The category used in the app's glossary. */
+  category: "Structure" | "Liquidity" | "Zones" | "Execution" | "Risk" | "Indicators";
+  /** One sentence for the hub card and related-term lists. */
+  short: string;
+};
+
+export const GLOSSARY_PATH = "/glossary";
+
+export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
+  {
+    slug: "market-structure",
+    term: "Market structure",
+    category: "Structure",
+    short:
+      "The sequence of swing highs and lows a market prints: rising is bullish, falling is bearish, neither is a range.",
+  },
+  {
+    slug: "break-of-structure",
+    term: "Break of Structure (BOS)",
+    category: "Structure",
+    short:
+      "A candle close beyond the last swing high or low in the direction of the trend. It signals continuation.",
+  },
+  {
+    slug: "change-of-character",
+    term: "Change of Character (CHoCH)",
+    category: "Structure",
+    short:
+      "The first break against the trend: an uptrend closing below its last higher low, or a downtrend above its last lower high.",
+  },
+];
+
+export function glossaryHref(slug: string) {
+  return `${GLOSSARY_PATH}/${slug}`;
+}
+
+/** DefinedTerm schema for a term page; the text must match the visible answer. */
+export function definedTermSchema(slug: string, name: string, description: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    name,
+    description,
+    url: `${SITE.url}${glossaryHref(slug)}`,
+    inDefinedTermSet: `${SITE.url}${GLOSSARY_PATH}`,
+  };
+}
+
+/** FAQPage schema for a visible FAQ. */
+export function faqSchema(faq: ReadonlyArray<{ q: string; a: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map(({ q, a }) => ({
+      "@type": "Question",
+      name: q,
+      acceptedAnswer: { "@type": "Answer", text: a },
+    })),
+  };
+}
