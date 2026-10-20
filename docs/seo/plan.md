@@ -55,7 +55,7 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 - [ ] `/markets` hub + `/markets/xauusd`: evergreen guide to trading gold (sessions, what moves it, typical pip value, how StraviFX reads it). No live prices or calls unless real data is wired in
 - [ ] `/markets/eurusd` and `/markets/gbpusd`
 - [ ] `/markets/usdjpy`, `/markets/gbpjpy` and `/markets/audusd`
-- [ ] "Best AI chart analysis apps for Android": honest, researched, cites sources, names competitors' strengths. **Before building:** answer open research question Q1 in `docs/seo/research.md` (are self-published "best apps" lists being demoted by AI search?). If the evidence says they backfire, replace this item with a neutral buyer's guide ("How to choose an AI chart analysis app") instead
+- [ ] "How to choose an AI chart analysis app": a neutral buyer's guide, not a ranked list. State the criteria (platform, what the analysis outputs, whether levels are checked against price data, risk tools, journal/track record, free tier, pricing model, privacy), explain each, say honestly where StraviFX fits and where it doesn't (e.g. Android only), and cite competitors' official pages for any fact about them. Never rank StraviFX first or publish a "best apps" list. (Replaced the "Best AI chart analysis apps for Android" item on 2026-10-20: Q1 answered, self-ranking lists tend to be cited without the publisher being recommended; research log 2026-10-20)
 - [ ] `/compare/chartai`: StraviFX vs ChartAI, factual and sourced
 
 ### Phase 5: technical polish
