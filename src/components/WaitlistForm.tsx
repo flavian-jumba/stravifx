@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 type WaitlistFormProps = {
   /** The learn-checkout Supabase function. */
   endpoint: string;
-  /** "KES 2,500". Empty while checkout is not configured. */
+  /** "$30". Empty while checkout is not configured. */
   priceLabel: string;
   /** False until the payment settings are in place; the form is then replaced by a notice. */
   open: boolean;

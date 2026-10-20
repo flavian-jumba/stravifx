@@ -6,7 +6,8 @@ import { LEARN } from "@/lib/learn";
 import { fetchLearnOffer, LEARN_CHECKOUT_ENDPOINT } from "@/lib/learn-api";
 
 export async function Learn() {
-  const { open, priceLabel, refundPolicy } = await fetchLearnOffer();
+  const { open, priceLabel, displayLabel, refundPolicy } =
+    await fetchLearnOffer();
 
   return (
     <section id="learn" className="bg-ink py-24 sm:py-40">
@@ -40,16 +41,16 @@ export async function Learn() {
                     </p>
                     <p className="text-sm text-fg-3">One-time payment</p>
                   </div>
-                  {priceLabel ? (
+                  {displayLabel ? (
                     <p className="mt-3 whitespace-nowrap font-pixel text-4xl leading-none text-fg sm:text-5xl">
-                      {priceLabel}
+                      {displayLabel}
                     </p>
                   ) : null}
 
                   <div className="mt-5">
                     <WaitlistForm
                       endpoint={LEARN_CHECKOUT_ENDPOINT}
-                      priceLabel={priceLabel}
+                      priceLabel={displayLabel}
                       open={open}
                     />
                   </div>
@@ -58,7 +59,17 @@ export async function Learn() {
                     {open ? (
                       <li className="flex items-center gap-2">
                         <Lock className="size-3.5 shrink-0" />
-                        Secure checkout by Paystack
+                        <span>
+                          Secure checkout by Paystack
+                          {displayLabel !== priceLabel ? (
+                            <>
+                              , billed as{" "}
+                              <span className="whitespace-nowrap">
+                                {priceLabel}
+                              </span>
+                            </>
+                          ) : null}
+                        </span>
                       </li>
                     ) : null}
                     {refundPolicy ? <li>{refundPolicy}</li> : null}

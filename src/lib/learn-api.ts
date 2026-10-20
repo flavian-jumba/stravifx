@@ -21,12 +21,33 @@ export const LEARN_CHECKOUT_ENDPOINT = `${FUNCTIONS_BASE}/learn-checkout`;
 export type LearnOffer = {
   /** False until the functions are deployed and their secrets are set. */
   open: boolean;
-  /** "KES 2,500" — comes from the amount Paystack will actually charge. */
+  /** "KES 3,900" — comes from the amount Paystack will actually charge. */
   priceLabel: string;
+  /** "$30" — the price shown to visitors. Same as priceLabel unless it was converted. */
+  displayLabel: string;
   refundPolicy: string;
 };
 
-const CLOSED: LearnOffer = { open: false, priceLabel: "", refundPolicy: "" };
+const CLOSED: LearnOffer = {
+  open: false,
+  priceLabel: "",
+  displayLabel: "",
+  refundPolicy: "",
+};
+
+/**
+ * Shillings per US dollar, used only to show the KES charge in dollars.
+ * Paystack still charges the KES amount; update this if the rate drifts.
+ */
+const KES_PER_USD = 129;
+
+/** "KES 3,900" → "$30". Any other label is shown as it is. */
+export function toDisplayLabel(priceLabel: string): string {
+  const match = /^KES\s*([\d,]+(?:\.\d+)?)$/i.exec(priceLabel.trim());
+  if (!match) return priceLabel;
+  const usd = Math.round(Number(match[1].replace(/,/g, "")) / KES_PER_USD);
+  return usd > 0 ? `$${usd.toLocaleString("en")}` : priceLabel;
+}
 
 /** Asks Supabase for the current offer. Re-checked every five minutes. */
 export async function fetchLearnOffer(): Promise<LearnOffer> {
@@ -37,9 +58,11 @@ export async function fetchLearnOffer(): Promise<LearnOffer> {
     });
     if (!response.ok) return CLOSED;
     const offer = (await response.json()) as Partial<LearnOffer>;
+    const priceLabel = offer.priceLabel ?? "";
     return {
-      open: offer.open === true && Boolean(offer.priceLabel),
-      priceLabel: offer.priceLabel ?? "",
+      open: offer.open === true && Boolean(priceLabel),
+      priceLabel,
+      displayLabel: toDisplayLabel(priceLabel),
       refundPolicy: offer.refundPolicy ?? "",
     };
   } catch {
