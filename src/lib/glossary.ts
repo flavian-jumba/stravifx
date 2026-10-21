@@ -38,6 +38,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "The first break against the trend: an uptrend closing below its last higher low, or a downtrend above its last lower high.",
   },
+  {
+    slug: "market-structure-shift",
+    term: "Market Structure Shift (MSS)",
+    category: "Structure",
+    short:
+      "The confirmed flip that can follow a CHoCH: a failed swing in the old direction, then a close beyond the next swing.",
+  },
+  {
+    slug: "swing-high-swing-low",
+    term: "Swing high / swing low",
+    category: "Structure",
+    short:
+      "A candle whose high is above its neighbours, or whose low is below them. The pivots every structure reading is measured from.",
+  },
+  {
+    slug: "higher-highs-higher-lows",
+    term: "Higher highs / higher lows",
+    category: "Structure",
+    short:
+      "The four swing labels (HH, HL, LH, LL) and what each combination says: uptrend, downtrend or range.",
+  },
 ];
 
 export function glossaryHref(slug: string) {

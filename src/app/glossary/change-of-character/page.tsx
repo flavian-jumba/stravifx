@@ -131,7 +131,10 @@ export default function ChangeOfCharacterPage() {
             <em>against</em> the trend. The trend may be ending.
           </li>
           <li>
-            <strong>MSS:</strong> the meaning varies by author. In the{" "}
+            <strong>
+              <a href={glossaryHref("market-structure-shift")}>MSS</a>:
+            </strong>{" "}
+            the meaning varies by author. In the{" "}
             {SITE.name} glossary it is the confirmed flip: structure breaks
             against the old trend and then prints highs and lows in the new
             direction. Other traders use MSS as another name for a CHoCH, or

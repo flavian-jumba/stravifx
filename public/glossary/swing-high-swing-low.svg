@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Swing high and swing low: in each five-candle group the middle candle has the highest high or the lowest low, confirmed once the candles on its right have closed</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">SWING HIGH / SWING LOW</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">Two candles on each side (5-candle rule)</text>
+  <g stroke="#F5F5F7" stroke-width="2" fill="none">
+    <line x1="70" y1="215" x2="70" y2="300"/><rect x="60" y="235" width="20" height="45" rx="2"/>
+    <line x1="120" y1="185" x2="120" y2="280"/><rect x="110" y="205" width="20" height="50" rx="2"/>
+    <line x1="170" y1="130" x2="170" y2="250"/><rect x="160" y="155" width="20" height="60" rx="2"/>
+    <line x1="220" y1="160" x2="220" y2="265"/><rect x="210" y="180" width="20" height="55" rx="2"/>
+    <line x1="270" y1="195" x2="270" y2="290"/><rect x="260" y="215" width="20" height="50" rx="2"/>
+    <line x1="430" y1="150" x2="430" y2="245"/><rect x="420" y="165" width="20" height="55" rx="2"/>
+    <line x1="480" y1="175" x2="480" y2="275"/><rect x="470" y="190" width="20" height="60" rx="2"/>
+    <line x1="530" y1="200" x2="530" y2="325"/><rect x="520" y="230" width="20" height="65" rx="2"/>
+    <line x1="580" y1="185" x2="580" y2="295"/><rect x="570" y="205" width="20" height="60" rx="2"/>
+    <line x1="630" y1="160" x2="630" y2="270"/><rect x="620" y="180" width="20" height="55" rx="2"/>
+  </g>
+  <line x1="50" y1="130" x2="290" y2="130" stroke="#F6BA18" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="410" y1="325" x2="650" y2="325" stroke="#F6BA18" stroke-width="2" stroke-dasharray="8 6"/>
+  <circle cx="170" cy="130" r="6" fill="#F6BA18"/>
+  <circle cx="530" cy="325" r="6" fill="#F6BA18"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="17" fill="#F5F5F7" text-anchor="middle">
+    <text x="170" y="114">swing high</text>
+    <text x="530" y="352">swing low</text>
+  </g>
+  <text x="170" y="330" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#A1A1A6" text-anchor="middle">high above all 4 neighbours</text>
+  <text x="530" y="120" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#A1A1A6" text-anchor="middle">low below all 4 neighbours</text>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. Each swing is confirmed only when the candles on its right have closed.</text>
+</svg>

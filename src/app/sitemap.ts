@@ -25,6 +25,9 @@ const PAGES: ReadonlyArray<{ path: string; updated: string }> = [
   { path: "/glossary/market-structure", updated: "2026-10-20" },
   { path: "/glossary/break-of-structure", updated: "2026-10-20" },
   { path: "/glossary/change-of-character", updated: "2026-10-20" },
+  { path: "/glossary/market-structure-shift", updated: "2026-10-21" },
+  { path: "/glossary/swing-high-swing-low", updated: "2026-10-21" },
+  { path: "/glossary/higher-highs-higher-lows", updated: "2026-10-21" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
