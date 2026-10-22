@@ -59,6 +59,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "The four swing labels (HH, HL, LH, LL) and what each combination says: uptrend, downtrend or range.",
   },
+  {
+    slug: "range-consolidation",
+    term: "Range / consolidation",
+    category: "Structure",
+    short:
+      "Price moving between a ceiling and a floor with no new highs or lows beyond them. A reason to wait, or to trade the edges.",
+  },
+  {
+    slug: "retest",
+    term: "Retest",
+    category: "Structure",
+    short:
+      "Price coming back to a level it has just closed beyond, to see whether the level now holds from the other side.",
+  },
+  {
+    slug: "liquidity",
+    term: "Liquidity",
+    category: "Liquidity",
+    short:
+      "Resting orders, mostly stop losses, that pool just beyond obvious highs, lows and round numbers. Price is often drawn toward them.",
+  },
 ];
 
 export function glossaryHref(slug: string) {

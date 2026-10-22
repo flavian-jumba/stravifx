@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Liquidity: buy stops cluster just above two equal swing highs and sell stops just below a swing low; a candle wicks above the highs and closes back below them, a sweep</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">LIQUIDITY</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">Where stop orders tend to rest</text>
+  <rect x="40" y="112" width="560" height="26" rx="6" fill="#F6BA18" fill-opacity="0.16"/>
+  <rect x="40" y="306" width="560" height="26" rx="6" fill="#F6BA18" fill-opacity="0.16"/>
+  <line x1="40" y1="140" x2="600" y2="140" stroke="#F6BA18" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="40" y1="304" x2="600" y2="304" stroke="#F6BA18" stroke-width="2" stroke-dasharray="8 6"/>
+  <polyline points="50,250 140,141 230,304 320,141 410,250" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#F5F5F7" stroke-width="2" fill="none">
+    <line x1="470" y1="104" x2="470" y2="235"/><rect x="460" y="160" width="20" height="60" rx="2"/>
+    <line x1="520" y1="170" x2="520" y2="270"/><rect x="510" y="180" width="20" height="70" rx="2"/>
+  </g>
+  <line x1="410" y1="250" x2="470" y2="220" stroke="#F5F5F7" stroke-width="3"/>
+  <circle cx="470" cy="104" r="6" fill="#F6BA18"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14" fill="#F5F5F7">
+    <text x="50" y="106">buy stops above equal highs</text>
+    <text x="50" y="352">sell stops below the low</text>
+    <text x="490" y="100">wick through, close back</text>
+  </g>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. The wick takes the stops above the highs; the close stays below.</text>
+</svg>

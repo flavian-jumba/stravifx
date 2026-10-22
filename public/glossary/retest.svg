@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Retest: price closes above a resistance level, comes back down to touch it from above, holds, and moves higher; the stop sits below the level</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">RETEST</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">Old resistance tested from above</text>
+  <line x1="40" y1="200" x2="680" y2="200" stroke="#F6BA18" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="380" y1="246" x2="680" y2="246" stroke="#A1A1A6" stroke-width="1.5" stroke-dasharray="4 6"/>
+  <polyline points="50,320 120,204 180,280 250,203 300,262 360,150 430,198 520,120 620,96" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="360" cy="150" r="6" fill="#F6BA18"/>
+  <circle cx="430" cy="198" r="6" fill="#F6BA18"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#F5F5F7">
+    <text x="40" y="188">level</text>
+    <text x="360" y="134" text-anchor="middle">close above</text>
+    <text x="430" y="228" text-anchor="middle">retest</text>
+  </g>
+  <text x="680" y="270" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#A1A1A6" text-anchor="end">stop below the level</text>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. A close back below the level would mean the retest failed.</text>
+</svg>

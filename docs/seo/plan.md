@@ -30,7 +30,7 @@ cited by AI search, without breaking Google's spam policies.
 Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossary.ts`. Expand each term into a page that starts with a 40–60-word direct answer, then an example, why it matters, common mistakes, related terms, and a link to the app. Three terms per run.
 - [x] `/glossary` hub + Market structure, Break of Structure (BOS), Change of Character (CHoCH) (shipped 2026-10-20)
 - [x] Market Structure Shift (MSS), Swing high / swing low, Higher highs / higher lows (shipped 2026-10-21)
-- [ ] Range / consolidation, Retest, Liquidity
+- [x] Range / consolidation, Retest, Liquidity (shipped 2026-10-22)
 - [ ] Liquidity sweep / stop hunt, Buy-side / sell-side liquidity, Equal highs / equal lows
 - [ ] Order block, Fair Value Gap (FVG), Breaker block
 - [ ] Mitigation block, Supply / demand zone, Premium / discount

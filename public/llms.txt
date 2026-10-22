@@ -30,6 +30,9 @@ StraviFX provides analysis for information and education only. It is not financi
 - [Market Structure Shift (MSS)](https://www.stravifx.app/glossary/market-structure-shift): the confirmed flip after a CHoCH (a failed swing in the old direction, then a close beyond the next swing); the three meanings traders give MSS; displacement and liquidity sweeps as optional filters
 - [Swing high / swing low](https://www.stravifx.app/glossary/swing-high-swing-low): a candle whose high (low) beats its neighbours; 1, 2 and 3-candle rules; why swings confirm late; wicks for swings, closes for breaks
 - [Higher highs / higher lows](https://www.stravifx.app/glossary/higher-highs-higher-lows): labelling swings HH, HL, LH, LL; which combinations are trends and which are ranges; how an uptrend ends
+- [Range / consolidation](https://www.stravifx.app/glossary/range-consolidation): price between a ceiling and a floor; marking the edges from wicks; a close outside ends the range; why the middle is the worst entry
+- [Retest](https://www.stravifx.app/glossary/retest): price returning to a level it just closed beyond; when a retest holds or fails; retest entry vs chasing the break, with stop and lot size compared
+- [Liquidity](https://www.stravifx.app/glossary/liquidity): market liquidity vs liquidity on a chart (resting stop orders); where it pools; sweep vs break decided by the close; where not to put your stop
 
 ## Facts
 
