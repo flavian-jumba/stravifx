@@ -80,6 +80,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "Resting orders, mostly stop losses, that pool just beyond obvious highs, lows and round numbers. Price is often drawn toward them.",
   },
+  {
+    slug: "liquidity-sweep",
+    term: "Liquidity sweep / stop hunt",
+    category: "Liquidity",
+    short:
+      "A push past an obvious high or low that triggers the stops there, then closes back inside. A close beyond is a breakout.",
+  },
+  {
+    slug: "buy-side-sell-side-liquidity",
+    term: "Buy-side / sell-side liquidity",
+    category: "Liquidity",
+    short:
+      "Buy orders resting above price (BSL) and sell orders resting below it (SSL). The pools a move is likely to travel toward.",
+  },
+  {
+    slug: "equal-highs-equal-lows",
+    term: "Equal highs / equal lows",
+    category: "Liquidity",
+    short:
+      "Two or more highs or lows at nearly the same price. A flat edge that collects stops, so a common sweep target.",
+  },
 ];
 
 export function glossaryHref(slug: string) {

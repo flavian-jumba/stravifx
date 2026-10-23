@@ -31,6 +31,9 @@ const PAGES: ReadonlyArray<{ path: string; updated: string }> = [
   { path: "/glossary/range-consolidation", updated: "2026-10-22" },
   { path: "/glossary/retest", updated: "2026-10-22" },
   { path: "/glossary/liquidity", updated: "2026-10-22" },
+  { path: "/glossary/liquidity-sweep", updated: "2026-10-23" },
+  { path: "/glossary/buy-side-sell-side-liquidity", updated: "2026-10-23" },
+  { path: "/glossary/equal-highs-equal-lows", updated: "2026-10-23" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Equal highs and equal lows: three highs within a few pips of each other make a flat ceiling with stops above it; two matching lows make a flat floor with stops below it</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">EQUAL HIGHS / EQUAL LOWS</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">A flat edge collects stops</text>
+  <rect x="40" y="106" width="560" height="24" rx="6" fill="#F6BA18" fill-opacity="0.16"/>
+  <rect x="40" y="306" width="560" height="24" rx="6" fill="#F6BA18" fill-opacity="0.16"/>
+  <rect x="40" y="132" width="560" height="10" fill="#F6BA18" fill-opacity="0.08"/>
+  <line x1="40" y1="137" x2="600" y2="137" stroke="#F6BA18" stroke-width="2" stroke-dasharray="8 6"/>
+  <line x1="40" y1="302" x2="600" y2="302" stroke="#F6BA18" stroke-width="2" stroke-dasharray="8 6"/>
+  <polyline points="50,240 130,138 200,302 280,134 350,250 430,140 500,302 560,220" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#F6BA18">
+    <circle cx="130" cy="138" r="6"/><circle cx="280" cy="134" r="6"/><circle cx="430" cy="140" r="6"/>
+    <circle cx="200" cy="302" r="6"/><circle cx="500" cy="302" r="6"/>
+  </g>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14" fill="#F5F5F7">
+    <text x="50" y="100">EQH · buy stops above</text>
+    <text x="50" y="352">EQL · sell stops below</text>
+    <text x="612" y="142">±tolerance</text>
+  </g>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. Highs within a small tolerance count as equal.</text>
+</svg>

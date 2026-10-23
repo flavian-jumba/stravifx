@@ -33,6 +33,9 @@ StraviFX provides analysis for information and education only. It is not financi
 - [Range / consolidation](https://www.stravifx.app/glossary/range-consolidation): price between a ceiling and a floor; marking the edges from wicks; a close outside ends the range; why the middle is the worst entry
 - [Retest](https://www.stravifx.app/glossary/retest): price returning to a level it just closed beyond; when a retest holds or fails; retest entry vs chasing the break, with stop and lot size compared
 - [Liquidity](https://www.stravifx.app/glossary/liquidity): market liquidity vs liquidity on a chart (resting stop orders); where it pools; sweep vs break decided by the close; where not to put your stop
+- [Liquidity sweep / stop hunt](https://www.stravifx.app/glossary/liquidity-sweep): a push past an obvious high or low that triggers the stops there and closes back inside; sweep vs false breakout vs breakout; StraviFX counts a sweep only when the same candle closes back inside
+- [Buy-side / sell-side liquidity](https://www.stravifx.app/glossary/buy-side-sell-side-liquidity): BSL rests above price, SSL below; why the names point that way; marking both pools; choosing a target from the map
+- [Equal highs / equal lows](https://www.stravifx.app/glossary/equal-highs-equal-lows): EQH and EQL; how close counts as equal (no standard; a tolerance that scales with the average candle range); equal highs vs a double top
 
 ## Facts
 

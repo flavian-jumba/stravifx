@@ -96,7 +96,13 @@ export default function LiquidityPage() {
             sellers put them above the last swing high.
           </li>
           <li>
-            <strong>Beyond equal highs and equal lows.</strong> Two or more
+            <strong>
+              Beyond{" "}
+              <a href={glossaryHref("equal-highs-equal-lows")}>
+                equal highs and equal lows
+              </a>
+              .
+            </strong> Two or more
             highs at the same price make a flat edge, and many traders&apos;
             stops sit just above it.
           </li>
@@ -113,7 +119,9 @@ export default function LiquidityPage() {
         <p>
           When price reaches a pool, those stop orders turn into market
           orders. A spike through the level that closes back inside is called
-          a liquidity sweep or stop hunt. A close beyond the level is a real
+          a{" "}
+          <a href={glossaryHref("liquidity-sweep")}>liquidity sweep or stop hunt</a>
+          . A close beyond the level is a real
           break. {SITE.name} uses the close to tell them apart, the same rule
           it uses for every{" "}
           <a href={glossaryHref("break-of-structure")}>break of structure</a>.
