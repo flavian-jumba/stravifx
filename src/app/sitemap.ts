@@ -21,7 +21,7 @@ const PAGES: ReadonlyArray<{ path: string; updated: string }> = [
   { path: "/tools/lot-size-calculator", updated: "2026-10-16" },
   { path: "/tools/pip-calculator", updated: "2026-10-17" },
   { path: "/tools/risk-reward-calculator", updated: "2026-10-18" },
-  { path: "/glossary", updated: "2026-10-22" },
+  { path: "/glossary", updated: "2026-10-24" },
   { path: "/glossary/market-structure", updated: "2026-10-20" },
   { path: "/glossary/break-of-structure", updated: "2026-10-20" },
   { path: "/glossary/change-of-character", updated: "2026-10-20" },
@@ -34,6 +34,9 @@ const PAGES: ReadonlyArray<{ path: string; updated: string }> = [
   { path: "/glossary/liquidity-sweep", updated: "2026-10-23" },
   { path: "/glossary/buy-side-sell-side-liquidity", updated: "2026-10-23" },
   { path: "/glossary/equal-highs-equal-lows", updated: "2026-10-23" },
+  { path: "/glossary/order-block", updated: "2026-10-24" },
+  { path: "/glossary/fair-value-gap", updated: "2026-10-24" },
+  { path: "/glossary/breaker-block", updated: "2026-10-24" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

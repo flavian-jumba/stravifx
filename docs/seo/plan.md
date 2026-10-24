@@ -32,7 +32,7 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 - [x] Market Structure Shift (MSS), Swing high / swing low, Higher highs / higher lows (shipped 2026-10-21)
 - [x] Range / consolidation, Retest, Liquidity (shipped 2026-10-22)
 - [x] Liquidity sweep / stop hunt, Buy-side / sell-side liquidity, Equal highs / equal lows (shipped 2026-10-23)
-- [ ] Order block, Fair Value Gap (FVG), Breaker block
+- [x] Order block, Fair Value Gap (FVG), Breaker block (shipped 2026-10-24)
 - [ ] Mitigation block, Supply / demand zone, Premium / discount
 - [ ] Optimal Trade Entry (OTE), Entry, Stop loss
 - [ ] Take profit (TP1 / TP2), Invalidation, Confluence

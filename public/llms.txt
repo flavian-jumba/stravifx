@@ -36,6 +36,9 @@ StraviFX provides analysis for information and education only. It is not financi
 - [Liquidity sweep / stop hunt](https://www.stravifx.app/glossary/liquidity-sweep): a push past an obvious high or low that triggers the stops there and closes back inside; sweep vs false breakout vs breakout; StraviFX counts a sweep only when the same candle closes back inside
 - [Buy-side / sell-side liquidity](https://www.stravifx.app/glossary/buy-side-sell-side-liquidity): BSL rests above price, SSL below; why the names point that way; marking both pools; choosing a target from the map
 - [Equal highs / equal lows](https://www.stravifx.app/glossary/equal-highs-equal-lows): EQH and EQL; how close counts as equal (no standard; a tolerance that scales with the average candle range); equal highs vs a double top
+- [Order block (OB)](https://www.stravifx.app/glossary/order-block): the last opposing candle before a strong move away; body vs wick zones; what makes one valid; mitigated vs failed; entry at the top of the body vs the middle, compared
+- [Fair Value Gap (FVG)](https://www.stravifx.app/glossary/fair-value-gap): a three-candle gap where candle 1's high and candle 3's low don't overlap; marked from wicks; full vs partial fill and the 50% line; FVG vs weekend gap
+- [Breaker block](https://www.stravifx.app/glossary/breaker-block): a failed order block retested from the other side; breaker vs mitigation block (the liquidity-sweep rule); a worked sell example
 
 ## Facts
 

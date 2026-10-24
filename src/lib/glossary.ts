@@ -101,6 +101,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "Two or more highs or lows at nearly the same price. A flat edge that collects stops, so a common sweep target.",
   },
+  {
+    slug: "order-block",
+    term: "Order block (OB)",
+    category: "Zones",
+    short:
+      "The last opposing candle before a strong move away. A zone price may return to, with the stop just beyond it.",
+  },
+  {
+    slug: "fair-value-gap",
+    term: "Fair Value Gap (FVG)",
+    category: "Zones",
+    short:
+      "A three-candle gap where candle 1's high and candle 3's low don't overlap. Traded through fast, so often revisited.",
+  },
+  {
+    slug: "breaker-block",
+    term: "Breaker block",
+    category: "Zones",
+    short:
+      "A failed order block that price closes through, then returns to from the other side, where it can act the opposite way.",
+  },
 ];
 
 export function glossaryHref(slug: string) {
