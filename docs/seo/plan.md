@@ -33,7 +33,7 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 - [x] Range / consolidation, Retest, Liquidity (shipped 2026-10-22)
 - [x] Liquidity sweep / stop hunt, Buy-side / sell-side liquidity, Equal highs / equal lows (shipped 2026-10-23)
 - [x] Order block, Fair Value Gap (FVG), Breaker block (shipped 2026-10-24)
-- [ ] Mitigation block, Supply / demand zone, Premium / discount
+- [x] Mitigation block, Supply / demand zone, Premium / discount (shipped 2026-10-25)
 - [ ] Optimal Trade Entry (OTE), Entry, Stop loss
 - [ ] Take profit (TP1 / TP2), Invalidation, Confluence
 - [ ] Timeframe alignment, Risk-to-reward (R:R), Position size / lot

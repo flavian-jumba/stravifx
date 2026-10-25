@@ -37,6 +37,9 @@ const PAGES: ReadonlyArray<{ path: string; updated: string }> = [
   { path: "/glossary/order-block", updated: "2026-10-24" },
   { path: "/glossary/fair-value-gap", updated: "2026-10-24" },
   { path: "/glossary/breaker-block", updated: "2026-10-24" },
+  { path: "/glossary/mitigation-block", updated: "2026-10-25" },
+  { path: "/glossary/supply-demand-zone", updated: "2026-10-25" },
+  { path: "/glossary/premium-discount", updated: "2026-10-25" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

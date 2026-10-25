@@ -39,6 +39,9 @@ StraviFX provides analysis for information and education only. It is not financi
 - [Order block (OB)](https://www.stravifx.app/glossary/order-block): the last opposing candle before a strong move away; body vs wick zones; what makes one valid; mitigated vs failed; entry at the top of the body vs the middle, compared
 - [Fair Value Gap (FVG)](https://www.stravifx.app/glossary/fair-value-gap): a three-candle gap where candle 1's high and candle 3's low don't overlap; marked from wicks; full vs partial fill and the 50% line; FVG vs weekend gap
 - [Breaker block](https://www.stravifx.app/glossary/breaker-block): a failed order block retested from the other side; breaker vs mitigation block (the liquidity-sweep rule); a worked sell example
+- [Mitigation block](https://www.stravifx.app/glossary/mitigation-block): a failed order block after a swing that fell short of the previous high or low; mitigation vs breaker block; not the same as a "mitigated" order block; a worked sell example
+- [Supply / demand zone](https://www.stravifx.app/glossary/supply-demand-zone): the base a sharp move left from; proximal and distal lines; drop-base-rally and rally-base-drop; fresh vs tested zones; a worked gold example
+- [Premium / discount](https://www.stravifx.app/glossary/premium-discount): a dealing range split at its 50% midpoint (equilibrium); how to pick the range; why a discount entry risks less for the same target, with two entries compared
 
 ## Facts
 

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Demand zone from a drop-base-rally: a sharp drop, a tight base of small candles, a strong rally, then a return to the fresh zone between the proximal and distal lines</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">DEMAND ZONE</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">Drop, base, rally: the base is the zone</text>
+  <rect x="160" y="240" width="530" height="26" fill="#F6BA18" fill-opacity="0.16"/>
+  <line x1="160" y1="240" x2="690" y2="240" stroke="#F6BA18" stroke-width="2"/>
+  <line x1="160" y1="266" x2="690" y2="266" stroke="#F6BA18" stroke-width="2" stroke-dasharray="6 6"/>
+  <polyline points="50,110 165,252" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#0A0A0B" stroke="#F5F5F7" stroke-width="2">
+    <line x1="181" y1="238" x2="181" y2="266"/><rect x="175" y="243" width="12" height="14"/>
+    <line x1="201" y1="240" x2="201" y2="262"/><rect x="195" y="245" width="12" height="12"/>
+    <line x1="221" y1="238" x2="221" y2="260"/><rect x="215" y="242" width="12" height="13"/>
+  </g>
+  <polyline points="235,250 380,110 460,180 545,246 665,115" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="545" cy="246" r="6" fill="#F6BA18"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14" fill="#F5F5F7">
+    <text x="130" y="170">drop</text>
+    <text x="172" y="226">base</text>
+    <text x="240" y="190">rally</text>
+    <text x="440" y="292">return to a fresh zone</text>
+    <text x="200" y="318">proximal line above, distal line below</text>
+  </g>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. A close below the distal line ends the zone.</text>
+</svg>

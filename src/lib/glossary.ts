@@ -122,6 +122,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "A failed order block that price closes through, then returns to from the other side, where it can act the opposite way.",
   },
+  {
+    slug: "mitigation-block",
+    term: "Mitigation block",
+    category: "Zones",
+    short:
+      "A failed order block after a swing that fell short. Price breaks it, then returns from the other side as trapped traders exit.",
+  },
+  {
+    slug: "supply-demand-zone",
+    term: "Supply / demand zone",
+    category: "Zones",
+    short:
+      "The base a sharp move left from: demand below price, supply above. The first return to a fresh zone usually counts most.",
+  },
+  {
+    slug: "premium-discount",
+    term: "Premium / discount",
+    category: "Zones",
+    short:
+      "A range split at its 50% midpoint, equilibrium. Buy in the discount half, sell in the premium half.",
+  },
 ];
 
 export function glossaryHref(slug: string) {

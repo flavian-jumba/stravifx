@@ -93,7 +93,9 @@ export default function BreakerBlockPage() {
         <p>
           Traders don&apos;t agree on whether step 1 is required. In the
           stricter ICT reading, it is: without the new high or low before the
-          failure, the flip is a mitigation block, not a breaker. Many charting
+          failure, the flip is a{" "}
+          <a href={glossaryHref("mitigation-block")}>mitigation block</a>, not a
+          breaker. Many charting
           tools and courses skip that test and call any broken order block a
           breaker.
         </p>
