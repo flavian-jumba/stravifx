@@ -1,6 +1,6 @@
 # Product Marketing Context: StraviFX
 
-**Document version:** 1.4 · **Last updated:** 2026-10-18
+**Document version:** 1.5 · **Last updated:** 2026-10-25
 **Read this first.** Every marketing task (SEO pages, Play listing copy, ads, emails, directory listings, social posts) starts from this file, so it doesn't re-guess the product. Facts here are checked against the app and site code. Anything unconfirmed is marked **TBD (owner)**.
 
 > This repo is public. Keep private numbers (revenue, conversion rates, user counts) out of this file; record them privately and add only what is safe to publish.
@@ -132,10 +132,12 @@ None running (as of 2026-10-16).
 - (2026-10-16) The app asked for a review right after onboarding (too early); 14 reviews arrived on one day. Fixed in the app code: it now asks once, when the user closes their first successful (non-sample) analysis, with no question before it. Ships with the next app release.
 - (2026-10-17) First visibility milestone: Google's AI Overview for "stravifx" now describes StraviFX correctly (AI chart reader, trade planning with entry/stop/targets/position size, forex/gold/crypto), largely in our own site wording, and adds a note separating it from "Stravix" brands. The Play listing ranks directly below it with the new title. The site itself wasn't yet indexed in Search Console, so the Play listing and on-page text carry the brand for now.
 - (2026-10-18) The smart-money terms our audience searches for (BOS, CHoCH, MSS) have no standard definitions: sources disagree on close-vs-wick confirmation and on what "MSS" means, and the results are dominated by TradingView posts, indicator scripts and broker blogs. Beginners meet conflicting rules, so glossary pages should name the variants plainly and state which convention StraviFX uses. See `docs/seo/research.md`.
+- (2026-10-25) Our audience's small accounts collide with the 0.01-lot minimum: 1% of $50 allows only a 5-pip EUR/USD stop, and a normal 20-pip stop risks 4%. Forums ask about this and ranking guides skip it, so risk content should work through the small-account case honestly (fewer trades that fit, or a smaller risk budget accepted knowingly), never suggest tightening a well-placed stop. See `docs/seo/research.md`.
 - Open questions **TBD (owner):** exact prices; the Play "Contains ads" label (the app code has no ads SDK, so it may be wrong); founder name for the About page.
 
 ## Changelog
 
+- **1.5 (2026-10-25):** learning: small accounts and the 0.01-lot minimum.
 - **1.4 (2026-10-18):** learning: SMC terms have no standard definitions.
 - **1.3 (2026-10-17):** learning: first AI Overview for the brand.
 - **1.2 (2026-10-16):** brand voice: no pressure tactics (added when installing the paywall and onboarding skills).

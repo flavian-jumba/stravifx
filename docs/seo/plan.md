@@ -43,7 +43,7 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 ### Phase 3: Learn guides (one long guide per run, 1,200–2,000 words, original)
 - [ ] `/learn` hub page (the homepage Learn section stays; this indexes the guides)
 - [ ] How to set a stop loss and take profit (links to the R:R calculator)
-- [ ] The 1% risk rule and position sizing (links to the lot size calculator)
+- [ ] The 1% risk rule and position sizing (links to the lot size calculator). Cover forex lots and pips, the 0.01-lot small-account case, losing-streak math, and "stop first, then size" vs "risk first" (research log 2026-10-25)
 - [ ] Market structure for beginners: trends, swings and breaks
 - [ ] Liquidity in forex: where stops sit and why price hunts them
 - [ ] How to read candlestick charts
@@ -68,6 +68,7 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 On-site, low-risk ideas the research step found evidence for. Each item names its source in `docs/seo/research.md`. They run after Phases 1–5 unless the owner moves them up.
 - [ ] `ContentPage`: add a visible "Published by Infinytech Solutions, Nairobi · Last updated <date>" line under the H1 on tools, glossary and guide pages, the date taken from the same `PAGES` entry in `src/app/sitemap.ts` (one source of truth, so it stays truthful), linking to /disclaimer until an About page exists. Must not change any title, H1, canonical or URL. Why: Google's helpful content self-assessment asks whether it's clear who made the content and whether it is easily verified, and finance is YMYL (research log 2026-10-18)
 - [ ] Glossary hub: add a short "Where to start" section above the term cards giving a reading order for the Structure terms (swing high / swing low → higher highs / higher lows → market structure → BOS → CHoCH → MSS), one line each on what the next page adds, so the overlapping pages read as a path rather than competing copies. Must not change the hub's title, meta description, H1 or URL; bump `/glossary` in the sitemap (a reader-visible new section). Why: the three terms shipped 2026-10-21 overlap with market structure, and Google's guidance favours distinct, well-linked pages over duplication (research log 2026-10-21)
+- [ ] Lot size calculator: when the size works out below 0.01 lots, also show what 0.01 lots would risk on that stop (money and % of the balance) and the widest stop that keeps the chosen risk at 0.01 lots (e.g. $50 at 1% on EUR/USD: 0.01 lots on a 20-pip stop risks $2.00, 4%; the widest stop is 5 pips). Add one sentence to the page's small-account FAQ answer pointing to it. Must not change the page's title, meta description, H1 or URL; bump `/tools/lot-size-calculator` in the sitemap (a reader-visible new output). Verify with worked examples for EUR/USD, USD/JPY and gold before shipping. Why: small accounts at the 0.01-lot minimum are a question forums ask and no ranking guide answers, and our audience trades small accounts (research log 2026-10-25)
 
 ### When the backlog is empty
 Pick the weakest page (thinnest content or worst PageSpeed) and improve it, or propose new items in the log for the owner to approve.
