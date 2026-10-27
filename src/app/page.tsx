@@ -6,6 +6,7 @@ import { HowItReads } from "@/components/sections/HowItReads";
 import { Learn } from "@/components/sections/Learn";
 import { Markets } from "@/components/sections/Markets";
 import { Principles } from "@/components/sections/Principles";
+import { Reviews } from "@/components/sections/Reviews";
 import { Statement } from "@/components/sections/Statement";
 import type { Metadata } from "next";
 import { SiteFooter } from "@/components/SiteFooter";
@@ -43,6 +44,7 @@ export default function Home() {
         <Statement />
         <HowItReads />
         <Features />
+        <Reviews />
         <Markets />
         <Learn />
         <Principles />

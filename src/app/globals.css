@@ -103,6 +103,12 @@
   }
 }
 
+@keyframes review-drift {
+  to {
+    translate: 0 -50%;
+  }
+}
+
 @keyframes heartbeat {
   0%,
   40%,
@@ -256,6 +262,115 @@
     animation: heartbeat 2.4s ease-in-out infinite;
   }
 
+  /* ---- Reviews ---------------------------------------------------------- */
+
+  .mask-fade-y {
+    mask-image: linear-gradient(
+      180deg,
+      transparent,
+      #000 12%,
+      #000 86%,
+      transparent
+    );
+  }
+
+  /* A column of review cards drifting upward forever. Two copies inside, so
+     moving by half its height lands exactly where it started. */
+  .review-col {
+    animation: review-drift var(--dur, 56s) linear infinite;
+    will-change: translate;
+  }
+
+  .review-lane:hover .review-col,
+  .review-lane:focus-within .review-col,
+  .review-wall[data-paused="true"] .review-col {
+    animation-play-state: paused;
+  }
+
+  /* Cursor spotlight: a soft gold wash inside, a brighter arc on the border. */
+  .spotlight {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .spotlight::before,
+  .spotlight::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.5s var(--ease-out-expo);
+  }
+
+  .spotlight::before {
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(
+      380px circle at var(--mx, 50%) var(--my, 0%),
+      rgb(246 186 24 / 0.09),
+      transparent 55%
+    );
+  }
+
+  .spotlight::after {
+    inset: -1px;
+    padding: 1px;
+    background: radial-gradient(
+      240px circle at var(--mx, 50%) var(--my, 0%),
+      rgb(255 224 138 / 0.7),
+      rgb(246 186 24 / 0.2) 40%,
+      transparent 70%
+    );
+    mask:
+      linear-gradient(#000 0 0) content-box exclude,
+      linear-gradient(#000 0 0);
+  }
+
+  .spotlight:hover::before,
+  .spotlight:hover::after {
+    opacity: 1;
+  }
+
+  /* Featured quote: each word blurs into focus, then the key phrase is
+     marked with a gold stroke. --i is the word's position. */
+  .quote-word {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(8px);
+    translate: 0 0.3em;
+    transition:
+      opacity 0.9s var(--ease-out-expo),
+      filter 0.9s var(--ease-out-expo),
+      translate 0.9s var(--ease-out-expo);
+    transition-delay: calc(var(--i, 0) * 34ms + 250ms);
+  }
+
+  [data-visible="true"] .quote-word {
+    opacity: 1;
+    filter: blur(0);
+    translate: 0 0;
+  }
+
+  .quote-mark {
+    background-image: linear-gradient(
+      transparent 58%,
+      rgb(246 186 24 / 0.6) 58%,
+      rgb(246 186 24 / 0.6) 90%,
+      transparent 90%
+    );
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    transition: background-size 1.2s var(--ease-out-expo);
+    transition-delay: calc(var(--i, 0) * 34ms + 650ms);
+  }
+
+  [data-visible="true"] .quote-mark {
+    background-size: 100% 100%;
+  }
+
   .mask-fade-x {
     mask-image: linear-gradient(
       90deg,
@@ -276,6 +391,32 @@
     opacity: 1;
     translate: none;
     transition: none;
+  }
+
+  .quote-word {
+    opacity: 1;
+    filter: none;
+    translate: none;
+    transition: none;
+  }
+
+  .quote-mark {
+    background-size: 100% 100%;
+    transition: none;
+  }
+
+  /* No drift: show every review once, in full. */
+  .review-wall {
+    height: auto;
+    mask-image: none;
+  }
+
+  .review-col {
+    animation: none;
+  }
+
+  .review-copy[aria-hidden="true"] {
+    display: none;
   }
 
   *,
