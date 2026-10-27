@@ -42,6 +42,9 @@ StraviFX provides analysis for information and education only. It is not financi
 - [Mitigation block](https://www.stravifx.app/glossary/mitigation-block): a failed order block after a swing that fell short of the previous high or low; mitigation vs breaker block; not the same as a "mitigated" order block; a worked sell example
 - [Supply / demand zone](https://www.stravifx.app/glossary/supply-demand-zone): the base a sharp move left from; proximal and distal lines; drop-base-rally and rally-base-drop; fresh vs tested zones; a worked gold example
 - [Premium / discount](https://www.stravifx.app/glossary/premium-discount): a dealing range split at its 50% midpoint (equilibrium); how to pick the range; why a discount entry risks less for the same target, with two entries compared
+- [Optimal Trade Entry (OTE)](https://www.stravifx.app/glossary/optimal-trade-entry): the 62–79% retracement of the last impulse leg (70.5% as the middle line); 62/79 vs 61.8/78.6; OTE vs the golden pocket; a worked EUR/USD example compared with a 50% entry
+- [Entry](https://www.stravifx.app/glossary/entry): the price a trade opens at; market, limit and stop entries; why the entry sets risk and reward when the stop and target come from the chart; the bid/ask spread catch; a worked USD/JPY example
+- [Stop loss](https://www.stravifx.app/glossary/stop-loss): an order that caps the loss; placed beyond the level that proves the idea wrong plus a buffer, then the lot size follows; stop vs stop-limit vs trailing vs guaranteed; gaps can fill it worse (cites Investor.gov); a worked gold example
 
 ## Facts
 

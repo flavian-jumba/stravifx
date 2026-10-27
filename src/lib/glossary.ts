@@ -143,6 +143,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "A range split at its 50% midpoint, equilibrium. Buy in the discount half, sell in the premium half.",
   },
+  {
+    slug: "optimal-trade-entry",
+    term: "Optimal Trade Entry (OTE)",
+    category: "Zones",
+    short:
+      "The 62–79% pullback of the last impulse leg. A deep entry that keeps the stop close and the target far.",
+  },
+  {
+    slug: "entry",
+    term: "Entry",
+    category: "Execution",
+    short:
+      "The price a trade opens at: market, limit or stop. With the stop and target fixed, it sets the risk and the reward.",
+  },
+  {
+    slug: "stop-loss",
+    term: "Stop loss",
+    category: "Execution",
+    short:
+      "An order that closes the trade at a set price to cap the loss. It goes where the idea is proven wrong, plus a buffer.",
+  },
 ];
 
 export function glossaryHref(slug: string) {

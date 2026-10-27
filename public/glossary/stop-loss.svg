@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Stop loss on a buy: the stop sits below the swing low plus a buffer of half the average candle range; when price gaps through it, the order fills lower than the stop price</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">STOP LOSS</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">Beyond the level that proves the idea wrong</text>
+  <line x1="80" y1="150" x2="690" y2="150" stroke="#F6BA18" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <line x1="80" y1="260" x2="690" y2="260" stroke="#6E6E73" stroke-width="1.5"/>
+  <line x1="80" y1="290" x2="690" y2="290" stroke="#F5F5F7" stroke-width="2"/>
+  <rect x="80" y="260" width="610" height="30" fill="#F5F5F7" fill-opacity="0.06"/>
+  <polyline points="60,200 120,260 200,170 250,200 320,150 380,190 430,215" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="430" y1="215" x2="470" y2="330" stroke="#F5F5F7" stroke-width="2" stroke-dasharray="3 6"/>
+  <polyline points="470,330 520,312 580,322" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="120" cy="260" r="6" fill="#F6BA18"/>
+  <circle cx="320" cy="150" r="6" fill="#F6BA18"/>
+  <circle cx="470" cy="330" r="7" fill="#F6BA18"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14" fill="#F5F5F7">
+    <text x="336" y="140">entry</text>
+    <text x="140" y="280">swing low</text>
+    <text x="500" y="280">buffer ≈ ½ ATR</text>
+    <text x="600" y="308">stop price</text>
+    <text x="250" y="352">gap: fills below the stop</text>
+  </g>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. A stop caps the loss only if it fills at its price.</text>
+</svg>
