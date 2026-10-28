@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Invalidation on a sell: a wick above the lower high that closes back below leaves the idea valid; a candle close above the lower high invalidates it before price reaches the stop loss further above</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">INVALIDATION</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">The close that proves the idea wrong</text>
+  <line x1="60" y1="140" x2="690" y2="140" stroke="#6E6E73" stroke-width="2"/>
+  <rect x="60" y="140" width="630" height="40" fill="#F5F5F7" fill-opacity="0.06"/>
+  <line x1="60" y1="180" x2="690" y2="180" stroke="#F6BA18" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <polyline points="70,320 140,180 200,250 250,215" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="140" cy="180" r="6" fill="#F6BA18"/>
+  <g stroke="#F5F5F7" stroke-width="2">
+    <line x1="290" y1="160" x2="290" y2="235"/>
+    <rect x="280" y="195" width="20" height="30" fill="#0A0A0B"/>
+    <line x1="460" y1="158" x2="460" y2="225"/>
+    <rect x="450" y="168" width="20" height="45" fill="#F5F5F7"/>
+  </g>
+  <circle cx="290" cy="195" r="5" fill="#F5F5F7"/>
+  <circle cx="460" cy="168" r="6" fill="#F6BA18"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14" fill="#F5F5F7">
+    <text x="152" y="172">lower high</text>
+    <text x="500" y="132">stop loss</text>
+    <text x="500" y="200">invalidation (close)</text>
+    <text x="232" y="262">wick, closes below:</text>
+    <text x="232" y="282" fill="#A1A1A6">still valid</text>
+    <text x="410" y="252">closes above:</text>
+    <text x="410" y="272" fill="#F6BA18">invalidated</text>
+  </g>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. The stop sits a buffer beyond as a hard limit.</text>
+</svg>

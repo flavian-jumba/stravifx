@@ -45,6 +45,9 @@ StraviFX provides analysis for information and education only. It is not financi
 - [Optimal Trade Entry (OTE)](https://www.stravifx.app/glossary/optimal-trade-entry): the 62–79% retracement of the last impulse leg (70.5% as the middle line); 62/79 vs 61.8/78.6; OTE vs the golden pocket; a worked EUR/USD example compared with a 50% entry
 - [Entry](https://www.stravifx.app/glossary/entry): the price a trade opens at; market, limit and stop entries; why the entry sets risk and reward when the stop and target come from the chart; the bid/ask spread catch; a worked USD/JPY example
 - [Stop loss](https://www.stravifx.app/glossary/stop-loss): an order that caps the loss; placed beyond the level that proves the idea wrong plus a buffer, then the lot size follows; stop vs stop-limit vs trailing vs guaranteed; gaps can fill it worse (cites Investor.gov); a worked gold example
+- [Take profit (TP1 / TP2)](https://www.stravifx.app/glossary/take-profit): an order that closes the trade in profit at a set price; TP1 at the nearest opposing level, TP2 at the next; what splitting a position pays in R (worked EUR/USD table); limit-order fills and the spread on sells (cites Investor.gov)
+- [Invalidation](https://www.stravifx.app/glossary/invalidation): the price, condition or time that proves a trade idea wrong; invalidation vs stop loss; setups invalidated before the entry fills; a worked GBP/USD sell with wick, close and fast-move cases
+- [Confluence](https://www.stravifx.app/glossary/confluence): several independent reasons at one price; counting one reason per family (direction, location, liquidity, momentum); a worked EUR/USD example where six signals are four reasons; confluence vs confirmation
 
 ## Facts
 

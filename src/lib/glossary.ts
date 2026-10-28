@@ -164,6 +164,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "An order that closes the trade at a set price to cap the loss. It goes where the idea is proven wrong, plus a buffer.",
   },
+  {
+    slug: "take-profit",
+    term: "Take profit (TP1 / TP2)",
+    category: "Execution",
+    short:
+      "An order that closes the trade in profit at a set price. TP1 banks part at the nearest level; TP2 runs to the next.",
+  },
+  {
+    slug: "invalidation",
+    term: "Invalidation",
+    category: "Execution",
+    short:
+      "The price, condition or time that proves the trade idea wrong. Decided before entry; the stop sits just beyond it.",
+  },
+  {
+    slug: "confluence",
+    term: "Confluence",
+    category: "Execution",
+    short:
+      "Several independent reasons pointing at one trade at one price. A filter that means fewer trades, not guaranteed ones.",
+  },
 ];
 
 export function glossaryHref(slug: string) {
