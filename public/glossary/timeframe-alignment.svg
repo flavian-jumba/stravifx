@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Timeframe alignment: the daily chart is in an uptrend, the 4-hour chart is pulling back into a daily higher-low area, and the 1-hour chart breaks back up, giving a buy that agrees with the daily trend</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">TIMEFRAME ALIGNMENT</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">The higher chart sets the side, the lower one the timing</text>
+  <g fill="none" stroke="#6E6E73" stroke-width="1"><rect x="32" y="100" width="208" height="240" rx="14"/><rect x="256" y="100" width="208" height="240" rx="14"/><rect x="480" y="100" width="208" height="240" rx="14"/></g>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="14" fill="#F5F5F7"><text x="48" y="126">DAILY · bias</text><text x="272" y="126">4-HOUR · pullback</text><text x="496" y="126">1-HOUR · trigger</text></g>
+  <polyline points="48,310 85,260 110,285 150,215 175,245 215,165" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <text x="48" y="330" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#A1A1A6">higher highs and lows</text>
+  <rect x="272" y="268" width="176" height="30" fill="#F6BA18" fill-opacity="0.16"/>
+  <polyline points="280,160 310,200 330,185 370,235 390,222 430,282" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <text x="272" y="330" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#A1A1A6">down into daily support</text>
+  <line x1="545" y1="232" x2="672" y2="232" stroke="#F6BA18" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <polyline points="500,190 530,250 548,232 572,290 600,262 625,282 660,200" fill="none" stroke="#F5F5F7" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="642" cy="232" r="6" fill="#F6BA18"/>
+  <text x="560" y="190" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#F6BA18">break up</text>
+  <text x="496" y="330" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#A1A1A6">buy with the daily</text>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. Three views of one market, from slowest to fastest.</text>
+</svg>

@@ -36,7 +36,7 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 - [x] Mitigation block, Supply / demand zone, Premium / discount (shipped 2026-10-25)
 - [x] Optimal Trade Entry (OTE), Entry, Stop loss (shipped 2026-10-27)
 - [x] Take profit (TP1 / TP2), Invalidation, Confluence (shipped 2026-10-28)
-- [ ] Timeframe alignment, Risk-to-reward (R:R), Position size / lot
+- [x] Timeframe alignment, Risk-to-reward (R:R), Position size / lot (shipped 2026-10-29)
 - [ ] Pip, Drawdown, Spread
 - [ ] RSI, Divergence, Candlestick / OHLC
 

@@ -185,6 +185,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "Several independent reasons pointing at one trade at one price. A filter that means fewer trades, not guaranteed ones.",
   },
+  {
+    slug: "timeframe-alignment",
+    term: "Timeframe alignment",
+    category: "Execution",
+    short:
+      "Checking that the higher timeframe trend points the same way as the chart you enter on, before you take the trade.",
+  },
+  {
+    slug: "risk-reward",
+    term: "Risk-to-reward (R:R)",
+    category: "Risk",
+    short:
+      "How far the target is compared with the stop. 1:3 needs a 25% win rate to break even, before costs.",
+  },
+  {
+    slug: "position-size",
+    term: "Position size / lot",
+    category: "Risk",
+    short:
+      "How much you trade. One standard lot is 100,000 units; the size follows from your risk and the stop, not leverage.",
+  },
 ];
 
 export function glossaryHref(slug: string) {
