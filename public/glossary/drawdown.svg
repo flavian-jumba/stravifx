@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">An account falls from a 1,000 dollar peak to an 800 dollar low, a 20 percent drawdown, and needs a 25 percent gain on 800 dollars to get back</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">DRAWDOWN</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">Down 20% from the peak, up 25% to get back</text>
+  <line x1="60" y1="130" x2="680" y2="130" stroke="#6E6E73" stroke-dasharray="4 6"/>
+  <line x1="60" y1="290" x2="680" y2="290" stroke="#6E6E73" stroke-dasharray="4 6"/>
+  <polyline fill="none" stroke="#F5F5F7" stroke-width="2.5" stroke-linejoin="round" points="60,250 120,200 170,215 230,130 280,175 320,160 370,240 410,225 450,290 500,250 540,265 590,190 630,205 680,118"/>
+  <circle cx="230" cy="130" r="6" fill="#F6BA18"/>
+  <circle cx="450" cy="290" r="6" fill="#F6BA18"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">
+    <text x="196" y="118" fill="#F5F5F7">Peak $1,000</text>
+    <text x="412" y="316" fill="#F5F5F7">Low $800</text>
+    <line x1="470" y1="134" x2="470" y2="286" stroke="#F6BA18" stroke-width="1.5"/>
+    <text x="250" y="266" fill="#F6BA18">−20% of the peak</text>
+    <text x="250" y="286" fill="#F6BA18">+25% of the low</text>
+    <text x="250" y="306" fill="#A1A1A6">same $200 →</text>
+    <text x="60" y="346" fill="#A1A1A6">The drawdown lasts until the curve passes $1,000 again.</text>
+  </g>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration, not real account data.</text>
+</svg>

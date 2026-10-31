@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Where the pip sits in a price quote: the fourth decimal of EUR/USD 1.08503 and the second decimal of USD/JPY 150.253, with the next digit as the pipette; gold has no settled pip</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">PIP</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">A distance, not an amount of money</text>
+  <g fill="#141416" stroke="#6E6E73" stroke-width="1"><rect x="32" y="104" width="316" height="176" rx="16"/><rect x="372" y="104" width="316" height="176" rx="16"/></g>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace">
+    <text x="52" y="136" font-size="13" fill="#A1A1A6">EUR/USD</text>
+    <text x="52" y="200" font-size="44" fill="#F5F5F7">1.085<tspan fill="#F6BA18">0</tspan><tspan fill="#6E6E73" font-size="30">3</tspan></text>
+    <text x="52" y="240" font-size="13" fill="#F6BA18">4th decimal = pip (0.0001)</text>
+    <text x="52" y="262" font-size="13" fill="#A1A1A6">5th decimal = pipette</text>
+    <text x="392" y="136" font-size="13" fill="#A1A1A6">USD/JPY</text>
+    <text x="392" y="200" font-size="44" fill="#F5F5F7">150.2<tspan fill="#F6BA18">5</tspan><tspan fill="#6E6E73" font-size="30">3</tspan></text>
+    <text x="392" y="240" font-size="13" fill="#F6BA18">2nd decimal = pip (0.01)</text>
+    <text x="392" y="262" font-size="13" fill="#A1A1A6">3rd decimal = pipette</text>
+    <text x="32" y="320" font-size="14" fill="#F5F5F7">Gold (XAU/USD): no settled pip. $0.01 here, $0.10 on many platforms.</text>
+    <text x="32" y="344" font-size="14" fill="#A1A1A6">A $1 move on one 100 oz lot is $100 either way.</text>
+  </g>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. Quotes are examples, not live prices.</text>
+</svg>

@@ -206,6 +206,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "How much you trade. One standard lot is 100,000 units; the size follows from your risk and the stop, not leverage.",
   },
+  {
+    slug: "pip",
+    term: "Pip",
+    category: "Risk",
+    short:
+      "The standard unit of a currency pair's price move: 0.0001, or 0.01 on yen pairs. A distance, not an amount of money.",
+  },
+  {
+    slug: "drawdown",
+    term: "Drawdown",
+    category: "Risk",
+    short:
+      "The fall from an account's peak to its lowest point after it. A 20% drawdown needs a 25% gain to get back.",
+  },
+  {
+    slug: "spread",
+    term: "Spread",
+    category: "Risk",
+    short:
+      "The gap between the bid and ask price. Every trade starts down by it, and a sell closes at the ask, not the chart's bid.",
+  },
 ];
 
 export function glossaryHref(slug: string) {
