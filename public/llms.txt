@@ -54,6 +54,9 @@ StraviFX provides analysis for information and education only. It is not financi
 - [Pip](https://www.stravifx.app/glossary/pip): the standard unit of a currency pair's price move (0.0001, or 0.01 on yen pairs); pipettes vs MetaTrader points; gold has no settled pip ($0.01 vs $0.10); pip value per lot for EUR/USD, USD/JPY, EUR/GBP and gold
 - [Drawdown](https://www.stravifx.app/glossary/drawdown): the fall from an account's peak to its low after it; drawdown % and the gain needed to recover; a worked table of ten straight losses at 1%, 2% and 5% risk; balance vs equity; MetaTrader's absolute, maximal and relative drawdown
 - [Spread](https://www.stravifx.app/glossary/spread): the gap between bid and ask; buys close at the bid, sells at the ask, so a sell stop can trigger before the bid chart reaches it (worked GBP/USD example); spread cost in money and as a share of the stop; variable vs fixed, commission accounts
+- [RSI (Relative Strength Index)](https://www.stravifx.app/glossary/rsi): a 0 to 100 momentum oscillator; RSI = 100 - 100 / (1 + average gain / average loss) over 14 candles; a worked example where Wilder, simple and exponential averaging give 60.5, 57.8 and 55.3 on the same prices; why 70 doesn't mean sell
+- [Divergence](https://www.stravifx.app/glossary/divergence): price makes a new high or low that RSI doesn't; regular vs hidden divergence table; worked gold example confirmed only by a close above the lower high, including the 0.01-lot sizing check and the version that fails
+- [Candlestick / OHLC](https://www.stravifx.app/glossary/candlestick): open, high, low and close; body and wicks; how four 1-hour candles make one 4-hour candle; why a candle that touches both stop and target can't tell you which came first; daily close times and data feeds
 
 ## Facts
 

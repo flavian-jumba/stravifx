@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">Gold makes a lower low at 3,996 after 4,010 while RSI makes a higher low, 31 after 24; a close above the 4,032 lower high confirms the break</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">DIVERGENCE</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">Price: lower low. RSI: higher low. Then wait for the break.</text>
+  <polyline points="40,104 100,128 140,118 200,188 260,146 330,206 380,170 430,150 470,128 520,120" fill="none" stroke="#F5F5F7" stroke-width="2.5" stroke-linejoin="round"/>
+  <line x1="260" y1="146" x2="540" y2="146" stroke="#A1A1A6" stroke-width="1" stroke-dasharray="6 5"/>
+  <line x1="200" y1="188" x2="330" y2="206" stroke="#F6BA18" stroke-width="2"/>
+  <circle cx="200" cy="188" r="5" fill="#F6BA18"/><circle cx="330" cy="206" r="5" fill="#F6BA18"/>
+  <circle cx="430" cy="150" r="5" fill="none" stroke="#F6BA18" stroke-width="2"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">
+    <text x="150" y="212" fill="#F5F5F7">A 4,010</text>
+    <text x="286" y="228" fill="#F5F5F7">B 3,996</text>
+    <text x="548" y="150" fill="#A1A1A6">Lower high 4,032</text>
+    <text x="440" y="176" fill="#F6BA18">Close above: the break</text>
+  </g>
+  <line x1="40" y1="250" x2="540" y2="250" stroke="#6E6E73" stroke-width="1"/>
+  <line x1="40" y1="334" x2="540" y2="334" stroke="#A1A1A6" stroke-width="1" stroke-dasharray="6 5"/>
+  <polyline points="40,280 100,300 140,292 200,350 260,300 330,328 380,300 430,286 470,276 520,272" fill="none" stroke="#A1A1A6" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="200" y1="350" x2="330" y2="328" stroke="#F6BA18" stroke-width="2"/>
+  <circle cx="200" cy="350" r="5" fill="#F6BA18"/><circle cx="330" cy="328" r="5" fill="#F6BA18"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">
+    <text x="214" y="366" fill="#F5F5F7">RSI 24</text>
+    <text x="344" y="322" fill="#F5F5F7">RSI 31</text>
+    <text x="548" y="338" fill="#A1A1A6">RSI 30</text>
+    <text x="548" y="276" fill="#A1A1A6">RSI(14)</text>
+  </g>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. Prices are examples, not real data. Not to scale.</text>
+</svg>

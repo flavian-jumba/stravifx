@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" width="720" height="400" role="img" aria-labelledby="t">
+  <title id="t">A rising price with RSI above 70 for nine candles while price keeps making higher highs</title>
+  <rect width="720" height="400" rx="24" fill="#0A0A0B"/>
+  <text x="32" y="48" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="18" fill="#F6BA18" letter-spacing="1">RSI</text>
+  <text x="32" y="76" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="15" fill="#A1A1A6">Overbought describes the move. It doesn't time the end.</text>
+  <polyline points="40,214 80,206 110,212 150,190 180,196 220,172 250,178 290,152 320,158 360,134 390,140 430,118 460,124 500,106 540,100" fill="none" stroke="#F5F5F7" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="556" y="104" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#F5F5F7">Price: higher highs</text>
+  <line x1="40" y1="240" x2="540" y2="240" stroke="#6E6E73" stroke-width="1"/>
+  <line x1="40" y1="264" x2="540" y2="264" stroke="#A1A1A6" stroke-width="1" stroke-dasharray="6 5"/>
+  <line x1="40" y1="300" x2="540" y2="300" stroke="#6E6E73" stroke-width="1" stroke-dasharray="2 5"/>
+  <line x1="40" y1="336" x2="540" y2="336" stroke="#A1A1A6" stroke-width="1" stroke-dasharray="6 5"/>
+  <rect x="180" y="248" width="340" height="16" fill="#F6BA18" opacity="0.12"/>
+  <polyline points="40,304 80,292 110,296 150,276 180,268 220,252 250,258 290,250 320,256 360,252 390,258 430,254 460,260 500,256 540,272" fill="none" stroke="#F6BA18" stroke-width="2.5" stroke-linejoin="round"/>
+  <g font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13">
+    <text x="556" y="268" fill="#A1A1A6">70 overbought</text>
+    <text x="556" y="304" fill="#6E6E73">50</text>
+    <text x="556" y="340" fill="#A1A1A6">30 oversold</text>
+    <text x="200" y="236" fill="#F6BA18">Above 70 for 9 candles, price still rising</text>
+  </g>
+  <text x="32" y="384" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="13" fill="#6E6E73">Illustration. Not real data. Not to scale.</text>
+</svg>

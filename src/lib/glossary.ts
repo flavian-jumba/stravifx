@@ -227,6 +227,27 @@ export const GLOSSARY: ReadonlyArray<GlossaryEntry> = [
     short:
       "The gap between the bid and ask price. Every trade starts down by it, and a sell closes at the ask, not the chart's bid.",
   },
+  {
+    slug: "rsi",
+    term: "RSI (Relative Strength Index)",
+    category: "Indicators",
+    short:
+      "A 0–100 reading of recent up closes against down closes. Above 70 is overbought, but strong trends stay there.",
+  },
+  {
+    slug: "divergence",
+    term: "Divergence",
+    category: "Indicators",
+    short:
+      "Price makes a new high or low and RSI doesn't. Momentum is fading; the trade waits for a break in structure.",
+  },
+  {
+    slug: "candlestick",
+    term: "Candlestick / OHLC",
+    category: "Indicators",
+    short:
+      "One period's open, high, low and close. The body runs open to close, the wicks to the extremes, and the order is lost.",
+  },
 ];
 
 export function glossaryHref(slug: string) {

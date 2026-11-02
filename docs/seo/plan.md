@@ -38,7 +38,7 @@ Source of truth: the app's glossary, `~/coding/ReactNative/fxp/src/config/glossa
 - [x] Take profit (TP1 / TP2), Invalidation, Confluence (shipped 2026-10-28)
 - [x] Timeframe alignment, Risk-to-reward (R:R), Position size / lot (shipped 2026-10-29)
 - [x] Pip, Drawdown, Spread (shipped 2026-10-31)
-- [ ] RSI, Divergence, Candlestick / OHLC
+- [x] RSI, Divergence, Candlestick / OHLC (shipped 2026-11-02)
 
 ### Phase 3: Learn guides (one long guide per run, 1,200–2,000 words, original)
 - [ ] `/learn` hub page (the homepage Learn section stays; this indexes the guides)
